@@ -385,3 +385,9 @@ input[type="radio"].visually-hidden {
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
           appearance: textfield; }
+
+.page-header__wrapper {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/bg-promo-desktop@1x.jpg");
+  min-height: 800px; }
