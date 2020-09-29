@@ -18,9 +18,26 @@
 <body class="body">
   <header class="page-header">
     <div class="page-header__wrapper">
-      <!-- <div class="container"> -->
-
-      <!-- </div> -->
+      <div class="page-header__top">
+        <a class="page-header__phone" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
+        <a class="page-header_logo">
+          <!-- 1х: 137px; 2x: 274px -->
+          <!-- 1х: 120px; 2x: 240px -->
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/logo-mobile@1x.webp 1x, img/logo-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/logo-mobile@1x.png 1x, img/logo-mobile@2x.png 2x">
+            <img src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png 2x" alt="Логотип компании" width="137" height="48">
+          </picture>
+        </a>
+        <a class="page-header__order" href="#">заказать звонок</a>
+      </div>
+      <p class="page-header__promo">
+        Учёба, путешествие и карьера для еврейской молодёжи
+      </p>
+      <button class="page-header__scroll">
+        <span class="visually-hidden">Подсказка - скролл страницы вниз</span>
+      </button>
     </div>
   </header>
 

@@ -1,4 +1,7 @@
-$base-color: black;
+// base font styles
+$base-font-family: "Fira Sans", "Arial", sans-serif;
+$alternative-font-family: "Arial", sans-serif;
+$base-color: #484848;
 
 // breakpoint
 $mobile-width: 320px;
@@ -6,7 +9,7 @@ $tablet-width: 768px;
 $desktop-width: 1024px;
 $mobile-width-only: 767px;
 $tablet-width-only: 1023px;
-$max-desktop-width: 1440px;
+$max-desktop-width: 1366px;
 
 // retina
 $retina-dpi: 144dpi;
