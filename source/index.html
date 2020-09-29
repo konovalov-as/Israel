@@ -74,12 +74,50 @@
 
   </main>
 
-  <footer class="page-footer" id="page-footer">
-    <div class="container">
-      <div class="page-footer__wrapper">
-
-
-      </div>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo">
+        <!-- 1х: 85px; 2x: 170px -->
+        <!-- 1х: 99px; 2x: 198px -->
+        <picture>
+          <source type="image/webp" media="(max-width: 1023px)"
+            srcset="img/logo-footer-mobile@1x.webp 1x, img/logo-footer-mobile@2x.webp 2x">
+          <source type="image/webp" srcset="img/logo-footer-desktop@1x.webp 1x, img/logo-footer-desktop@2x.webp 2x">
+          <source media="(max-width: 1023px)"
+            srcset="img/logo-footer-mobile@1x.png 1x, img/logo-footer-mobile@2x.png 2x">
+          <img src="img/logo-footer-desktop@1x.png" srcset="img/logo-footer-desktop@1x.png" alt="Логотип компании"
+            width="85" height="27">
+        </picture>
+      </a>
+      <p class="page-footer__copyright">
+        Copyright someDesignCompany ©2019
+      </p>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Мы в Facebook</span>
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Мы в Twitter</span>
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Мы в Instagram</span>
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
   </footer>
 
