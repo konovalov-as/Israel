@@ -116,6 +116,57 @@
     </div>
   </footer>
 
+  <section class="modal modal--order">
+    <div class="modal__content modal__content--order">
+      <h3 class="modal__title">Заказать звонок</h3>
+      <p class="modal__text">
+        Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на
+        ваш вопрос!
+      </p>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal__fileds">
+          <label>
+            <span class="visually-hidden">Ваше имя</span>
+            <!-- <span class="modal__input-error modal__input-error--hidden-phone modal__input-error--phone">Данные не верны</span> -->
+            <input type="text" name="modal-name" placeholder="Имя" required="">
+          </label>
+          <label>
+            <span class="visually-hidden">Ваш номер телефона</span>
+            <!-- <span class="modal__input-error modal__input-error--hidden-email modal__input-error--email">Данные не верны</span> -->
+            <input type="tel" name="modal-tel" placeholder="Телефон">
+          </label>
+        </div>
+        <div class="modal__submit-block">
+          <button type="submit">перезвоните мне</button>
+        </div>
+        <div class="modal__field-checkbox">
+          <label>
+            <span class="visually-hidden">Согласие на обработку персональных данных</span>
+            <input class="visually-hidden" type="checkbox" name="consent" id="consent">
+            <span></span>
+            <span>Нажимая на кнопку, вы даёте согласие на обработку персональных данных</span>
+          </label>
+        </div>
+      </form>
+    </div>
+    <button class="modal__close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+  </section>
+
+  <section class="modal modal--success">
+    <div class="modal__content">
+      <h3 class="modal__title">Заявка принята</h3>
+      <p class="modal__success">
+        Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
+      </p>
+      <button class="button modal__button" type="button">Понятно</button>
+    </div>
+    <button class="modal__close modal__close--success" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+  </section>
+
   <!-- svg4everybody -->
   <script src="js/vendor.js"></script>
   <script>svg4everybody(); // run it now or whenever you are ready</script>

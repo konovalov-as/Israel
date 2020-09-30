@@ -332,6 +332,13 @@ template {
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
 html,
 body {
   -webkit-box-sizing: border-box;
@@ -600,3 +607,162 @@ input[type="radio"].visually-hidden {
   .social__link svg {
     width: 32px;
     height: 32px; } }
+
+.modal {
+  max-width: 480px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  position: relative; }
+
+.modal--order {
+  padding-top: 56px;
+  padding-bottom: 40px;
+  padding-left: 48px;
+  padding-right: 30px; }
+
+.modal__content {
+  max-width: 360px;
+  width: 100%; }
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  width: 242px;
+  height: 34px;
+  left: 491px;
+  top: 179px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+  color: #1fc0fc; }
+
+.modal__text {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 15px;
+  line-height: 26px;
+  opacity: 0.87; }
+
+.modal__form input {
+  width: 100%;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  border: 2px solid #e3e3e3;
+  border-radius: 80px;
+  margin-bottom: 8px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 30px; }
+
+.modal__fileds {
+  margin-bottom: 24px; }
+
+.modal__submit-block {
+  margin-bottom: 16px; }
+
+.modal__submit-block button {
+  display: block;
+  margin: 0 auto;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-left: 48px;
+  padding-right: 48px;
+  border: none;
+  background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+  border-radius: 80px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white; }
+
+.modal__field-checkbox {
+  max-width: 264px;
+  margin: 0 auto; }
+
+.modal__field-checkbox span {
+  font-size: 13px;
+  line-height: 19px;
+  opacity: 0.74; }
+
+.modal__field-checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  margin-bottom: 20px; }
+
+.modal__field-checkbox input {
+  margin-right: 8px;
+  width: auto; }
+
+.modal__field-checkbox input + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-checkbox-off.svg"); }
+
+.modal__field-checkbox input:checked + span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #ffc341;
+  border-radius: 50%; }
+
+.modal__field-checkbox input:disabled + span {
+  opacity: 0.5; }
+
+.modal__field-checkbox input:checked:disabled + span {
+  opacity: 0.5; }
+
+.modal__field-checkbox input:hover + span {
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.7); }
+
+.modal__field-checkbox input:disabled:hover + span {
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.modal__field-checkbox input:active + span {
+  -webkit-box-shadow: 0 0 2px 1px rgba(31, 192, 252, 0.5);
+          box-shadow: 0 0 2px 1px rgba(31, 192, 252, 0.5); }
+
+.modal__close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  padding: 0;
+  border: none;
+  width: 18px;
+  height: 17px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-close.svg");
+  cursor: pointer; }
+  .modal__close:hover, .modal__close:focus {
+    opacity: 0.7; }
+  .modal__close:active {
+    opacity: 0.4; }
