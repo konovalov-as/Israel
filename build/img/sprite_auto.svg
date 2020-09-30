@@ -17,6 +17,15 @@
 <stop stop-color="#FFC341"/>
 <stop offset="0.963542" stop-color="#FFD701"/>
 </linearGradient>
+
+<linearGradient id="paint0_linear" x1="16.8421" y1="1.82858" x2="52.588" y2="13.7318" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFC341"/>
+<stop offset="0.963542" stop-color="#FFD701"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="30.6316" y1="8.02857" x2="55.5095" y2="19.0743" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFC341"/>
+<stop offset="0.963542" stop-color="#FFD701"/>
+</linearGradient>
 </defs><symbol id="icon-checkbox-off" viewBox="0 0 16 16">
 <rect x="1" y="1" width="14" height="14" rx="1" stroke="url(#paint0_linear)" stroke-width="2"/>
 
@@ -44,6 +53,10 @@
 <path opacity="0.2" d="M10 1.5L2 9L10 16.5" stroke="#484848" stroke-width="2"/>
 </symbol><symbol id="icon-review-arrow-right" viewBox="0 0 11 18">
 <path opacity="0.2" d="M1 16.5L9 9L0.999999 1.5" stroke="#484848" stroke-width="2"/>
+</symbol><symbol id="icon-success-order" viewBox="0 0 71 64">
+<rect x="3" y="3" width="58" height="58" rx="29" stroke="url(#paint0_linear)" stroke-width="6"/>
+<path d="M18 27.88L32.1972 43L66 7" stroke="url(#paint1_linear)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+
 </symbol><symbol id="icon-telegram" viewBox="0 0 24 24">
 <g opacity="0.16">
 <path d="M9.63262 14.8632L9.2687 19.8888C9.78938 19.8888 10.0149 19.6692 10.2853 19.4055L12.7264 17.115L17.7847 20.7519C18.7124 21.2595 19.366 20.9922 19.6163 19.914L22.9365 4.63926L22.9374 4.63836C23.2317 3.29196 22.4415 2.76547 21.5377 3.09576L2.02135 10.4316C0.689406 10.9392 0.709573 11.6682 1.79493 11.9985L6.78447 13.5222L18.3742 6.40235C18.9196 6.04775 19.4155 6.24395 19.0076 6.59855L9.63262 14.8632Z" fill="black"/>
