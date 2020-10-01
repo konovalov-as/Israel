@@ -3,14 +3,18 @@
 @import "global/normalize.scss";
 @import "global/fonts.scss";
 @import "global/global.scss";
-// @import "blocks/container";
+@import "blocks/container";
 
 // header
 @import "blocks/page-header.scss";
 
+// titles
+@import "blocks/title-h2.scss";
+
 // blocks style
 @import "blocks/button.scss";
 @import "blocks/body.scss";
+@import "blocks/about-program.scss";
 
 // footer
 @import "blocks/page-footer.scss";

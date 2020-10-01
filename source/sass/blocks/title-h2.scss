@@ -1,0 +1,20 @@
+.title-h2 {
+  font-family: $alternative-1-font-family;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #1fc0fc;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+@media (max-width: $tablet-width-only) {
+  .title-h2 {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}

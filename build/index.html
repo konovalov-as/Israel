@@ -44,9 +44,23 @@
   <main class="page-main">
     <h1 class="visually-hidden">Израиль - Учёба, путешествие и карьера для еврейской молодёжи</h1>
 
-    <section class="advantages" id="advantages">
-      <div class="container">
-
+    <section class="about-program container">
+      <h2 class="title-h2">О программе</h2>
+      <p class="about-program__description">&laquo;Маса&raquo;&nbsp;&mdash; совместный проект правительства Израиля
+        и&nbsp;Еврейского агентства Сохнут. Более 250 учебных программ (60&nbsp;на русском) и&nbsp;возможность
+        стажировки в&nbsp;Израиле. В&nbsp;течение освоения программ предусмотрен грант от&nbsp;4200 до&nbsp;8400$.
+      </p>
+      <div class="about-program__video">
+        <!-- 1х: 780px; 2x: 1740px -->
+        <!-- 1х: 320px; 2x: 640px -->
+        <picture>
+          <source type="image/webp" media="(max-width: 1023px)" srcset="img/about-program-mobile@1x.webp 1x, img/about-program-mobile@2x.webp 2x">
+          <source type="image/webp" srcset="img/about-program-desktop@1x.webp 1x, img/about-program-desktop@2x.webp 2x">
+          <img src="img/about-program-desktop@1x.png" srcset="img/about-program-desktop@2x.png 2x" alt="Обзор программы" width="780" height="460">
+        </picture>
+        <button class="about-program__play-button" type="button">
+          <span class="visually-hidden">Воспроизвести видео</span>
+        </button>
       </div>
     </section>
 

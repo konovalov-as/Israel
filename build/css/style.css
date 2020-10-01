@@ -379,6 +379,9 @@ input[type="radio"].visually-hidden {
      -moz-appearance: textfield;
           appearance: textfield; }
 
+.container {
+  padding: 0 calc(50% - 683px); }
+
 .page-header {
   padding: 0 calc(50% - 683px); }
 
@@ -514,6 +517,24 @@ input[type="radio"].visually-hidden {
     margin-left: auto;
     margin-right: 6px; } }
 
+.title-h2 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #1fc0fc;
+  margin-top: 0;
+  margin-bottom: 24px; }
+
+@media (max-width: 1023px) {
+  .title-h2 {
+    font-size: 32px;
+    line-height: 39px; } }
+
 .button {
   display: block;
   margin: 0 auto;
@@ -546,6 +567,80 @@ input[type="radio"].visually-hidden {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal; }
+
+.about-program {
+  background-color: transparent;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-image: url("../img/bg-about-desktop@1x.png");
+  margin-bottom: 104px;
+  padding-bottom: 96px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .about-program {
+      background-image: url("../img/bg-about-desktop@2x.png"); } }
+
+.about-program__description {
+  max-width: 700px;
+  font-size: 17px;
+  line-height: 29px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.about-program__video {
+  position: relative;
+  text-align: center; }
+
+.about-program__video img {
+  width: 740px;
+  height: 460px; }
+
+.about-program__play-button {
+  position: absolute;
+  top: calc(50% - 52px);
+  left: calc(50% - 50px);
+  width: 96px;
+  height: 96px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img/icon-play.svg");
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  border: none; }
+  .about-program__play-button:hover, .about-program__play-button:focus {
+    background-image: url("../img/icon-play-hover.svg"); }
+  .about-program__play-button:active {
+    opacity: 0.3;
+    background-image: url("../img/icon-play-active.svg"); }
+
+@media (max-width: 1023px) {
+  .about-program {
+    padding-bottom: 45px;
+    background-size: contain; }
+  .about-program__description {
+    font-size: 16px;
+    line-height: 26px; }
+  .about-program__video img {
+    width: auto;
+    height: auto; } }
+
+@media (max-width: 767px) {
+  .about-program {
+    margin-bottom: 80px;
+    padding-bottom: 0;
+    background-position: center;
+    background-image: url("../img/bg-about-mobile@1x.png"); }
+  .about-program__description {
+    text-align: left;
+    margin-left: 16px;
+    margin-right: 16px; }
+  .about-program__video img {
+    width: 320px;
+    height: 224px; } }
 
 .page-footer__wrapper {
   display: -webkit-box;
