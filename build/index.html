@@ -127,13 +127,11 @@
         <div class="modal__fileds">
           <label>
             <span class="visually-hidden">Ваше имя</span>
-            <!-- <span class="modal__input-error modal__input-error--hidden-phone modal__input-error--phone">Данные не верны</span> -->
-            <input type="text" name="modal-name" placeholder="Имя" required="">
+            <input type="text" id="modal-name" name="modal-name" placeholder="Имя" required="" minlength="2">
           </label>
           <label>
             <span class="visually-hidden">Ваш номер телефона</span>
-            <!-- <span class="modal__input-error modal__input-error--hidden-email modal__input-error--email">Данные не верны</span> -->
-            <input type="tel" name="modal-tel" placeholder="Телефон">
+            <input type="tel" id="modal-phone" name="modal-phone" placeholder="Телефон" required="" pattern="[0-9]{10}">
           </label>
         </div>
         <div class="modal__submit-block">

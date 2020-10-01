@@ -83,14 +83,14 @@
   &:focus {
     border-color: #ffc341;
   }
+}
 
-  &:invalid {
-    // border-color: red;
-  }
+.modal__fileds--invalid input {
+  border-color: red;
+}
 
-  &:valid {
-    // border-color: #484848;
-  }
+.modal__fileds--valid input {
+  border-color: #484848;
 }
 
 .modal__submit-block {

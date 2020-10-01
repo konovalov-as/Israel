@@ -714,6 +714,12 @@ input[type="radio"].visually-hidden {
 .modal__fileds input:hover, .modal__fileds input:focus {
   border-color: #ffc341; }
 
+.modal__fileds--invalid input {
+  border-color: red; }
+
+.modal__fileds--valid input {
+  border-color: #484848; }
+
 .modal__submit-block {
   margin-bottom: 16px; }
 
