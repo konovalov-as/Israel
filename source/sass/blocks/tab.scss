@@ -26,6 +26,7 @@
   padding-right: 5px;
   font-size: 15px;
   line-height: 18px;
+  color: $base-color;
   opacity: 0.87;
   cursor: pointer;
 
@@ -33,6 +34,10 @@
   &:focus {
     color: white;
     background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+    font-weight: 500;
+    font-size: 16.1788px;
+    line-height: 19px;
+    text-transform: uppercase;
   }
 
   &:active {

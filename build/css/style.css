@@ -712,11 +712,16 @@ input[type="radio"].visually-hidden {
   padding-right: 5px;
   font-size: 15px;
   line-height: 18px;
+  color: #484848;
   opacity: 0.87;
   cursor: pointer; }
   .tab__control-item:hover, .tab__control-item:focus {
     color: white;
-    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); }
+    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+    font-weight: 500;
+    font-size: 16.1788px;
+    line-height: 19px;
+    text-transform: uppercase; }
   .tab__control-item:active {
     color: #ffd701;
     background: none; }
@@ -902,6 +907,10 @@ input[type="radio"].visually-hidden {
   background-position: right top;
   background-repeat: no-repeat;
   background-image: url("../img/bg-programm-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .program {
+      background-size: contain;
+      background-image: url("../img/bg-programm-desktop@2x.png"); } }
 
 .program__description {
   margin-top: 0;
@@ -921,7 +930,15 @@ input[type="radio"].visually-hidden {
 
 @media (max-width: 767px) {
   .program {
-    margin-left: 0; }
+    margin-left: 0;
+    background-image: url("../img/bg-programm-mobile@1x.png");
+    background-position: right 115px; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .program {
+      background-size: contain;
+      background-image: url("../img/bg-programm-mobile@2x.png"); } }
+
+@media (max-width: 767px) {
   .program__description {
     font-size: 14px;
     line-height: 22px; } }

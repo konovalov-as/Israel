@@ -6,6 +6,11 @@
   background-position: right top;
   background-repeat: no-repeat;
   background-image: url("../img/bg-programm-desktop@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-size: contain;
+    background-image: url("../img/bg-programm-desktop@2x.png");
+  }
 }
 
 .program__description {
@@ -31,8 +36,15 @@
 
 @media (max-width: $mobile-width-only) {
   .program {
-    // padding: 0 calc(50% - 481px);
     margin-left: 0;
+    background-image: url("../img/bg-programm-mobile@1x.png");
+    background-position: right 115px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+
+      background-size: contain;
+      background-image: url("../img/bg-programm-mobile@2x.png");
+    }
   }
 
   .program__description {
