@@ -4,7 +4,6 @@
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;
-  text-align: center;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #1fc0fc;
@@ -12,9 +11,21 @@
   margin-bottom: 24px;
 }
 
+.title-h2--center {
+  text-align: center;
+}
+
+.title-h2--mb {
+  margin-bottom: 83px;
+}
+
 @media (max-width: $tablet-width-only) {
   .title-h2 {
     font-size: 32px;
     line-height: 39px;
+  }
+
+  .title-h2--mb {
+    margin-bottom: 16px;
   }
 }

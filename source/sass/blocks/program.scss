@@ -1,0 +1,42 @@
+.program {
+  margin-bottom: 31px;
+  margin-left: 210px;
+  margin-right: 0;
+  background-color: transparent;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-image: url("../img/bg-programm-desktop@1x.png");
+}
+
+.program__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 26px;
+  opacity: 0.87;
+}
+
+@media (max-width: $tablet-width-only) {
+  .program {
+    margin-bottom: 80px;
+    margin-left: 30px;
+    background-size: contain;
+  }
+
+  .program__description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .program {
+    // padding: 0 calc(50% - 481px);
+    margin-left: 0;
+  }
+
+  .program__description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

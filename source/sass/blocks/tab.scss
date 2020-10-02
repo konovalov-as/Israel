@@ -1,0 +1,288 @@
+.tab {
+  display: flex;
+}
+
+.tab__controls {
+  max-width: 230px;
+  width: 100%;
+  margin-right: 64px;
+}
+
+.tab__item {
+  margin-right: 210px;
+}
+
+.tab__control-item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  max-width: 180px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding-top: 25px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 5px;
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 0.87;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+  }
+
+  &:active {
+    color: #ffd701;
+    background: none;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    border-left: 50px solid #ffd701;
+  }
+
+  &:active::after {
+    border-left: 50px solid transparent;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 17px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 0;
+    height: 0;
+    border-top: 43px solid transparent;
+    border-left: 50px solid transparent;
+    border-bottom: 42px solid transparent;
+  }
+}
+
+.tab__control-item--1 {
+  &:hover::before,
+  &:focus::before {
+    background-image: url("../img/icon-culture-desktop-hover@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-culture-desktop-hover@2x.png");
+    }
+  }
+
+  &:active::before {
+    background-image: url("../img/icon-culture-desktop-active@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-culture-desktop-active@2x.png");
+    }
+  }
+
+  &::before {
+    background-image: url("../img/icon-culture-desktop-default@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-culture-desktop-default@2x.png");
+    }
+  }
+}
+
+.tab__control-item--2 {
+  &:hover::before,
+  &:focus::before {
+    background-image: url("../img/icon-study-desktop-hover@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-study-desktop-hover@2x.png");
+    }
+  }
+
+  &:active::before {
+    background-image: url("../img/icon-study-desktop-active@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-study-desktop-active@2x.png");
+    }
+  }
+
+  &::before {
+    background-image: url("../img/icon-study-desktop-default@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-study-desktop-default@2x.png");
+    }
+  }
+}
+
+.tab__control-item--3 {
+  &:hover::before,
+  &:focus::before {
+    background-image: url("../img/icon-business-desktop-hover@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-business-desktop-hover@2x.png");
+    }
+  }
+
+  &:active::before {
+    background-image: url("../img/icon-business-desktop-active@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-business-desktop-active@2x.png");
+    }
+  }
+
+  &::before {
+    background-image: url("../img/icon-business-desktop-default@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-business-desktop-default@2x.png");
+    }
+  }
+}
+
+.tab__control-item--4 {
+  &:hover::before,
+  &:focus::before {
+    background-image: url("../img/icon-volonteur-desktop-hover@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-volonteur-desktop-hover@2x.png");
+    }
+  }
+
+  &:active::before {
+    background-image: url("../img/icon-volonteur-desktop-active@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-volonteur-desktop-active@2x.png");
+    }
+  }
+
+  &::before {
+    background-image: url("../img/icon-volonteur-desktop-default@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-volonteur-desktop-default@2x.png");
+    }
+  }
+}
+
+.tab__control-item--5 {
+  &:hover::before,
+  &:focus::before {
+    background-image: url("../img/icon-religion-desktop-hover@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-religion-desktop-hover@2x.png");
+    }
+  }
+
+  &:active::before {
+    background-image: url("../img/icon-religion-desktop-active@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-religion-desktop-active@2x.png");
+    }
+  }
+
+  &::before {
+    background-image: url("../img/icon-religion-desktop-default@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: contain;
+      background-image: url("../img/icon-religion-desktop-default@2x.png");
+    }
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .tab {
+    display: block;
+  }
+
+  .tab__controls {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .tab__item {
+    margin-right: 30px;
+  }
+
+  .tab__control-item {
+    max-width: 100%;
+    width: auto;
+    margin-bottom: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    &:hover,
+    &:focus {
+      color: white;
+      border-radius: 60.6704px;
+    }
+
+    &:active {
+      color: #ffd701;
+      background: none;
+    }
+
+    &::before {
+      content: "";
+      width: 32px;
+      height: 32px;
+      background-size: contain;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .tab__controls {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+
+  .tab__control-item {
+    margin-bottom: 0;
+  }
+
+  .tab__item {
+    margin-right: 0;
+  }
+}

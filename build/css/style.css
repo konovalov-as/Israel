@@ -382,6 +382,12 @@ input[type="radio"].visually-hidden {
 .container {
   padding: 0 calc(50% - 683px); }
 
+@media (max-width: 767px) {
+  .container {
+    padding: 0 calc(50% - 160px);
+    padding-left: 16px;
+    padding-right: 15px; } }
+
 .page-header {
   padding: 0 calc(50% - 683px); }
 
@@ -523,17 +529,41 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;
-  text-align: center;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #1fc0fc;
   margin-top: 0;
   margin-bottom: 24px; }
 
+.title-h2--center {
+  text-align: center; }
+
+.title-h2--mb {
+  margin-bottom: 83px; }
+
 @media (max-width: 1023px) {
   .title-h2 {
     font-size: 32px;
-    line-height: 39px; } }
+    line-height: 39px; }
+  .title-h2--mb {
+    margin-bottom: 16px; } }
+
+.title-h3 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+  color: #1fc0fc;
+  margin-top: 0;
+  margin-bottom: 24px; }
+
+@media (max-width: 1023px) {
+  .title-h3 {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 16px; } }
 
 .button {
   display: block;
@@ -641,6 +671,260 @@ input[type="radio"].visually-hidden {
   .about-program__video img {
     width: 320px;
     height: 224px; } }
+
+.js-tab--hide {
+  display: none; }
+
+.js-tab--show {
+  display: block; }
+
+.js-tab--active {
+  border-color: red; }
+
+.tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.tab__controls {
+  max-width: 230px;
+  width: 100%;
+  margin-right: 64px; }
+
+.tab__item {
+  margin-right: 210px; }
+
+.tab__control-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 180px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding-top: 25px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 5px;
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 0.87;
+  cursor: pointer; }
+  .tab__control-item:hover, .tab__control-item:focus {
+    color: white;
+    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); }
+  .tab__control-item:active {
+    color: #ffd701;
+    background: none; }
+  .tab__control-item:hover::after, .tab__control-item:focus::after {
+    border-left: 50px solid #ffd701; }
+  .tab__control-item:active::after {
+    border-left: 50px solid transparent; }
+  .tab__control-item::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 17px; }
+  .tab__control-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 0;
+    height: 0;
+    border-top: 43px solid transparent;
+    border-left: 50px solid transparent;
+    border-bottom: 42px solid transparent; }
+
+.tab__control-item--1:hover::before, .tab__control-item--1:focus::before {
+  background-image: url("../img/icon-culture-desktop-hover@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--1:hover::before, .tab__control-item--1:focus::before {
+      background-size: contain;
+      background-image: url("../img/icon-culture-desktop-hover@2x.png"); } }
+
+.tab__control-item--1:active::before {
+  background-image: url("../img/icon-culture-desktop-active@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--1:active::before {
+      background-size: contain;
+      background-image: url("../img/icon-culture-desktop-active@2x.png"); } }
+
+.tab__control-item--1::before {
+  background-image: url("../img/icon-culture-desktop-default@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--1::before {
+      background-size: contain;
+      background-image: url("../img/icon-culture-desktop-default@2x.png"); } }
+
+.tab__control-item--2:hover::before, .tab__control-item--2:focus::before {
+  background-image: url("../img/icon-study-desktop-hover@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--2:hover::before, .tab__control-item--2:focus::before {
+      background-size: contain;
+      background-image: url("../img/icon-study-desktop-hover@2x.png"); } }
+
+.tab__control-item--2:active::before {
+  background-image: url("../img/icon-study-desktop-active@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--2:active::before {
+      background-size: contain;
+      background-image: url("../img/icon-study-desktop-active@2x.png"); } }
+
+.tab__control-item--2::before {
+  background-image: url("../img/icon-study-desktop-default@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--2::before {
+      background-size: contain;
+      background-image: url("../img/icon-study-desktop-default@2x.png"); } }
+
+.tab__control-item--3:hover::before, .tab__control-item--3:focus::before {
+  background-image: url("../img/icon-business-desktop-hover@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--3:hover::before, .tab__control-item--3:focus::before {
+      background-size: contain;
+      background-image: url("../img/icon-business-desktop-hover@2x.png"); } }
+
+.tab__control-item--3:active::before {
+  background-image: url("../img/icon-business-desktop-active@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--3:active::before {
+      background-size: contain;
+      background-image: url("../img/icon-business-desktop-active@2x.png"); } }
+
+.tab__control-item--3::before {
+  background-image: url("../img/icon-business-desktop-default@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--3::before {
+      background-size: contain;
+      background-image: url("../img/icon-business-desktop-default@2x.png"); } }
+
+.tab__control-item--4:hover::before, .tab__control-item--4:focus::before {
+  background-image: url("../img/icon-volonteur-desktop-hover@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--4:hover::before, .tab__control-item--4:focus::before {
+      background-size: contain;
+      background-image: url("../img/icon-volonteur-desktop-hover@2x.png"); } }
+
+.tab__control-item--4:active::before {
+  background-image: url("../img/icon-volonteur-desktop-active@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--4:active::before {
+      background-size: contain;
+      background-image: url("../img/icon-volonteur-desktop-active@2x.png"); } }
+
+.tab__control-item--4::before {
+  background-image: url("../img/icon-volonteur-desktop-default@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--4::before {
+      background-size: contain;
+      background-image: url("../img/icon-volonteur-desktop-default@2x.png"); } }
+
+.tab__control-item--5:hover::before, .tab__control-item--5:focus::before {
+  background-image: url("../img/icon-religion-desktop-hover@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--5:hover::before, .tab__control-item--5:focus::before {
+      background-size: contain;
+      background-image: url("../img/icon-religion-desktop-hover@2x.png"); } }
+
+.tab__control-item--5:active::before {
+  background-image: url("../img/icon-religion-desktop-active@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--5:active::before {
+      background-size: contain;
+      background-image: url("../img/icon-religion-desktop-active@2x.png"); } }
+
+.tab__control-item--5::before {
+  background-image: url("../img/icon-religion-desktop-default@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .tab__control-item--5::before {
+      background-size: contain;
+      background-image: url("../img/icon-religion-desktop-default@2x.png"); } }
+
+@media (max-width: 1023px) {
+  .tab {
+    display: block; }
+  .tab__controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 32px; }
+  .tab__item {
+    margin-right: 30px; }
+  .tab__control-item {
+    max-width: 100%;
+    width: auto;
+    margin-bottom: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px; }
+    .tab__control-item:hover, .tab__control-item:focus {
+      color: white;
+      border-radius: 60.6704px; }
+    .tab__control-item:active {
+      color: #ffd701;
+      background: none; }
+    .tab__control-item::before {
+      content: "";
+      width: 32px;
+      height: 32px;
+      background-size: contain; }
+    .tab__control-item::after {
+      content: none; } }
+
+@media (max-width: 1023px) {
+  .tab__controls {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: scroll; }
+  .tab__control-item {
+    margin-bottom: 0; }
+  .tab__item {
+    margin-right: 0; } }
+
+.program {
+  margin-bottom: 31px;
+  margin-left: 210px;
+  margin-right: 0;
+  background-color: transparent;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-image: url("../img/bg-programm-desktop@1x.png"); }
+
+.program__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 26px;
+  opacity: 0.87; }
+
+@media (max-width: 1023px) {
+  .program {
+    margin-bottom: 80px;
+    margin-left: 30px;
+    background-size: contain; }
+  .program__description {
+    font-size: 14px;
+    line-height: 22px; } }
+
+@media (max-width: 767px) {
+  .program {
+    margin-left: 0; }
+  .program__description {
+    font-size: 14px;
+    line-height: 22px; } }
 
 .page-footer__wrapper {
   display: -webkit-box;
