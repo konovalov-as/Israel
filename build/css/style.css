@@ -548,6 +548,10 @@ input[type="radio"].visually-hidden {
   .title-h2--mb {
     margin-bottom: 16px; } }
 
+@media (max-width: 767px) {
+  .title-h2--pt {
+    padding-top: 40px; } }
+
 .title-h3 {
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
@@ -942,6 +946,139 @@ input[type="radio"].visually-hidden {
   .program__description {
     font-size: 14px;
     line-height: 22px; } }
+
+.want-to-go {
+  position: relative;
+  margin-bottom: 291px;
+  background-position: left 130px;
+  background-repeat: no-repeat;
+  background-image: url("../img/bg-backpack-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .want-to-go {
+      background-size: contain;
+      background-image: url("../img/bg-backpack-desktop@2x.png"); } }
+
+.want-to-go__phone {
+  max-width: 477px;
+  margin-left: 210px;
+  margin-bottom: 131px;
+  padding-top: 209px; }
+
+.want-to-go__text {
+  max-width: 400px;
+  font-size: 17px;
+  line-height: 29px;
+  opacity: 0.87;
+  margin-top: 0;
+  margin-bottom: 64px; }
+
+.want-to-go__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative; }
+
+.want-to-go__form input {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  border: 2px solid #e3e3e3;
+  border-radius: 80px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px; }
+  .want-to-go__form input:hover, .want-to-go__form input:focus {
+    border-color: #ffc341; }
+
+.want-to-go__form--invalid input {
+  border-color: red; }
+
+.want-to-go__form--valid input {
+  border-color: #484848; }
+
+.want-to-go__form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 63.4px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  border: none;
+  background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+  border-radius: 80px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  cursor: pointer; }
+  .want-to-go__form button:hover, .want-to-go__form button:focus {
+    background: linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%); }
+  .want-to-go__form button:active {
+    background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%); }
+
+.want-to-go__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1; }
+
+.want-to-go__image img {
+  width: 818px;
+  height: 594px; }
+
+@media (max-width: 1023px) {
+  .want-to-go {
+    padding-bottom: 291px;
+    margin-bottom: 0; }
+  .want-to-go__phone {
+    margin-left: 90px;
+    margin-bottom: 0;
+    padding-top: 0; }
+  .want-to-go__text {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 24px; }
+  .want-to-go__image img {
+    width: 550px;
+    height: auto; } }
+
+@media (max-width: 767px) {
+  .want-to-go {
+    position: static;
+    margin-bottom: 80px;
+    background-position: left -10px;
+    background-image: url("../img/bg-backpack-mobile@1x.png"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .want-to-go {
+      background-size: contain;
+      background-image: url("../img/bg-backpack-mobile@2x.png"); } }
+
+@media (max-width: 767px) {
+  .want-to-go__phone {
+    margin-left: auto;
+    margin-right: auto; }
+  .want-to-go__form {
+    display: block;
+    position: static; }
+  .want-to-go__form input {
+    width: 100%;
+    margin-bottom: 8px; }
+  .want-to-go__form button {
+    position: static;
+    width: 100%; }
+  .want-to-go__image {
+    position: static;
+    text-align: center; }
+  .want-to-go__image img {
+    width: 100%;
+    height: auto; } }
 
 .page-footer__wrapper {
   display: -webkit-box;
