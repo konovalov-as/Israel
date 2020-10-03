@@ -10,7 +10,7 @@
     orderModal.classList.add('modal--show');
     modalNameInput.focus();
     modalNameInput.value = localStorage.getItem('modalNameInput');
-    modalPhoneInput.value = localStorage.getItem('modalPhoneInput');
+    modalPhoneInput.value = localStorage.getItem('phoneInput');
   });
 
   // close modal by close button
@@ -49,77 +49,95 @@
     });
   });
 
-  // validate form
+  // validate modal form
   var orderFrom = document.querySelector('.modal__form');
   var modalFiled = orderFrom.querySelector('.modal__fileds');
   var modalNameInput = orderFrom.querySelector('#modal-name');
   var modalPhoneInput = orderFrom.querySelector('#modal-phone');
 
-  var addInvalidClass = function () {
-    modalFiled.classList.remove('modal__fileds--valid');
-    modalFiled.classList.add('modal__fileds--invalid');
+  var addInvalidClass = function (formBlock) {
+    formBlock.classList.remove('modal__fileds--valid');
+    formBlock.classList.add('modal__fileds--invalid');
   };
 
-  var addValidClass = function () {
-    modalFiled.classList.add('modal__fileds--valid');
-    modalFiled.classList.remove('modal__fileds--invalid');
+  var addValidClass = function (formBlock) {
+    formBlock.classList.add('modal__fileds--valid');
+    formBlock.classList.remove('modal__fileds--invalid');
   };
 
-  var validateName = function () {
-    if (modalNameInput.validity.valueMissing) {
-      modalNameInput.setCustomValidity('Как тебя зовут?');
-      addInvalidClass();
+  var validateName = function (name, formBlock) {
+    if (name.validity.valueMissing) {
+      name.setCustomValidity('Как тебя зовут?');
+      addInvalidClass(formBlock);
       return;
     }
-    if (modalNameInput.validity.tooShort) {
-      modalNameInput.setCustomValidity('Не меньше ' + modalNameInput.minLength + ' символов');
-      addInvalidClass();
+    if (name.validity.tooShort) {
+      name.setCustomValidity('Не меньше ' + modalNameInput.minLength + ' символов');
+      addInvalidClass(formBlock);
       return;
     }
-    modalNameInput.setCustomValidity('');
-    addValidClass();
+    name.setCustomValidity('');
+    addValidClass(formBlock);
     localStorage.setItem('modalNameInput', modalNameInput.value);
   };
 
-  var validatePhone = function () {
-    if (modalPhoneInput.validity.valueMissing) {
-      modalPhoneInput.setCustomValidity('Укажи номер телефона');
-      addInvalidClass();
+  var validatePhone = function (phone, formBlock) {
+    if (phone.validity.valueMissing) {
+      phone.setCustomValidity('Укажи номер телефона');
+      addInvalidClass(formBlock);
       return;
     }
-    if (modalPhoneInput.validity.patternMismatch) {
-      modalPhoneInput.setCustomValidity('Укажи 10 цифр номера телефона без 8 или +7');
-      addInvalidClass();
+    if (phone.validity.patternMismatch) {
+      phone.setCustomValidity('Укажи 10 цифр номера телефона без 8 или +7');
+      addInvalidClass(formBlock);
       return;
     }
-    modalPhoneInput.setCustomValidity('');
-    addValidClass();
-    localStorage.setItem('modalPhoneInput', modalPhoneInput.value);
+    phone.setCustomValidity('');
+    addValidClass(formBlock);
+    localStorage.setItem('phoneInput', phone.value);
   };
 
   modalNameInput.addEventListener('invalid', function () {
-    validateName();
+    validateName(modalNameInput, modalFiled);
   });
 
   modalNameInput.addEventListener('input', function () {
-    validateName();
+    validateName(modalNameInput, modalFiled);
   });
 
   modalPhoneInput.addEventListener('invalid', function () {
-    validatePhone();
+    validatePhone(modalPhoneInput, modalFiled);
   });
 
   modalPhoneInput.addEventListener('input', function () {
-    validatePhone();
+    validatePhone(modalPhoneInput, modalFiled);
   });
 
   // submit order form
   var successModal = document.querySelector('.modal--success');
   orderFrom.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    validateName();
-    validatePhone();
+    validateName(modalNameInput, modalFiled);
+    validatePhone(modalPhoneInput, modalFiled);
     orderModal.classList.remove('modal--show');
+    successModal.classList.add('modal--show');
+  });
+
+  // validate phone into want to go block
+  var wantGoForm = document.querySelector('.want-to-go__form');
+  var goPhoneInput = wantGoForm.querySelector('#go-phone');
+
+  goPhoneInput.addEventListener('invalid', function () {
+    validatePhone(goPhoneInput, wantGoForm);
+  });
+
+  goPhoneInput.addEventListener('input', function () {
+    validatePhone(goPhoneInput, wantGoForm);
+  });
+
+  wantGoForm.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    validatePhone(goPhoneInput, wantGoForm);
     successModal.classList.add('modal--show');
   });
 
