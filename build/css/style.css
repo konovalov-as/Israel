@@ -556,6 +556,8 @@ input[type="radio"].visually-hidden {
     margin-bottom: 16px; } }
 
 @media (max-width: 767px) {
+  .title-h2--mobile-center {
+    text-align: center; }
   .title-h2--pt {
     padding-top: 40px; } }
 
@@ -1470,6 +1472,96 @@ input[type="radio"].visually-hidden {
     height: 8px;
     background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
     opacity: 1; } }
+
+.about-live {
+  min-height: 583px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  background-image: url("../img/bg-live-israel-desktop@1x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .about-live {
+      background-image: url("../img/bg-live-israel-desktop@2x.jpg"); } }
+
+.about-live__wrapper {
+  max-width: 410px;
+  margin-left: auto;
+  margin-right: 167px;
+  padding-top: 120px; }
+
+.about-live__text {
+  font-size: 17px;
+  line-height: 29px;
+  color: white;
+  opacity: 0.87;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  margin-top: 0;
+  margin-bottom: 48px; }
+
+.about-live__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 230px;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  padding-right: 25px;
+  padding-left: 25px;
+  text-decoration: none; }
+
+.about-live__link svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  margin-right: 8px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+
+@media (max-width: 1023px) {
+  .about-live__inner {
+    padding-top: 150px; }
+  .about-live__text {
+    font-size: 16px;
+    line-height: 26px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8); } }
+
+@media (max-width: 767px) {
+  .about-live {
+    min-height: 272px;
+    background-position: top center;
+    background-image: url("../img/bg-live-israel-mobile@1x.jpg");
+    background-size: cover;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .about-live {
+      background-image: url("../img/bg-live-israel-mobile@2x.jpg"); } }
+
+@media (max-width: 767px) {
+  .about-live__wrapper {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0; }
+  .about-live__text {
+    margin-top: 80px;
+    margin-bottom: 57px;
+    margin-left: 22px;
+    margin-right: 22px; }
+  .about-live__link {
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media (max-width: 320px) {
+  .about-live {
+    background-size: contain; } }
 
 .page-footer__wrapper {
   display: -webkit-box;
