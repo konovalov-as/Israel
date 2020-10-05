@@ -1245,6 +1245,7 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-color: transparent;
   background-image: url("../img/bg-live-desktop@1x.png"), url("../img/bg-watch-desktop@1x.png");
+  margin-bottom: 96px;
   padding-bottom: 64px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .live-in-israel {
