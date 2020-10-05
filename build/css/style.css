@@ -1241,7 +1241,7 @@ input[type="radio"].visually-hidden {
     margin-left: 0; } }
 
 .live-in-israel {
-  background-position: 130px, 1430px 630px;
+  background-position: center, right 630px;
   background-repeat: no-repeat;
   background-color: transparent;
   background-image: url("../img/bg-live-desktop@1x.png"), url("../img/bg-watch-desktop@1x.png");
