@@ -7,10 +7,11 @@
   background-image: url("../img/bg-how-go-desktop@1x.png"),
     url("../img/bg-stamp-air-desktop@1x.png");
   margin-left: 12px;
-  margin-bottom: 160px;
+  margin-bottom: 0;
+  padding-bottom: 301px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-size: cover, auto;
+    background-size: cover, auto 254px;
     background-image: url("../img/bg-how-go-desktop@2x.png"),
       url("../img/bg-stamp-air-desktop@2x.png");
   }

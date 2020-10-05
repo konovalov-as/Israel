@@ -339,6 +339,13 @@ template {
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap; }
+
 html,
 body {
   -webkit-box-sizing: border-box;
@@ -1091,10 +1098,11 @@ input[type="radio"].visually-hidden {
   background-size: cover, auto;
   background-image: url("../img/bg-how-go-desktop@1x.png"), url("../img/bg-stamp-air-desktop@1x.png");
   margin-left: 12px;
-  margin-bottom: 160px; }
+  margin-bottom: 0;
+  padding-bottom: 301px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .how-go__wrapper {
-      background-size: cover, auto;
+      background-size: cover, auto 254px;
       background-image: url("../img/bg-how-go-desktop@2x.png"), url("../img/bg-stamp-air-desktop@2x.png"); } }
 
 .how-go__image {
@@ -1231,6 +1239,236 @@ input[type="radio"].visually-hidden {
     max-width: 100%; }
   .how-go__item {
     margin-left: 0; } }
+
+.live-in-israel {
+  background-position: 130px, 1430px 630px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url("../img/bg-live-desktop@1x.png"), url("../img/bg-watch-desktop@1x.png");
+  padding-bottom: 64px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .live-in-israel {
+      background-size: contain;
+      background-image: url("../img/bg-live-desktop@2x.png"); } }
+
+.live-in-israel__wrapper {
+  margin-left: 104px;
+  margin-right: 110px;
+  margin-top: -141px; }
+
+.live-in-israel__text {
+  max-width: 720px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 17px;
+  line-height: 29px;
+  text-align: right;
+  opacity: 0.87; }
+
+.live-in-israel__img {
+  position: relative; }
+
+.live-in-israel__img--1 img {
+  width: 482px;
+  height: 732px; }
+
+.live-in-israel__img--2 img {
+  width: 211px;
+  height: 318px; }
+
+.live-in-israel__img--3 img {
+  width: 411px;
+  height: 318px; }
+
+.live-in-israel__img--4 img {
+  width: 411px;
+  height: 318px; }
+
+.live-in-israel__img--5 img {
+  width: 214px;
+  height: 318px; }
+
+.live-in-israel__label {
+  font-family: "Raleway-Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 25px;
+  color: white;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  position: absolute;
+  bottom: 32px;
+  left: 40px; }
+
+.live-in-israel__img--1 .live-in-israel__label {
+  max-width: 350px; }
+
+.live-in-israel__img--2 .live-in-israel__label {
+  max-width: 120px; }
+
+.live-in-israel__img--3 .live-in-israel__label {
+  max-width: 400px; }
+
+.live-in-israel__img--4 .live-in-israel__label {
+  max-width: 400px;
+  width: 100%; }
+
+.live-in-israel__img--5 .live-in-israel__label {
+  max-width: 120px; }
+
+.live-in-israel__image-block {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: -35px; }
+
+.live-in-israel__img--1 {
+  margin-right: 15px; }
+
+.live-in-israel__img--2 {
+  margin-right: 30px; }
+
+.live-in-israel__img--2,
+.live-in-israel__img--3 {
+  margin-top: 70px; }
+
+.live-in-israel__img--4,
+.live-in-israel__img--5 {
+  position: absolute; }
+
+.live-in-israel__img--4 {
+  left: 43%;
+  bottom: 0; }
+
+.live-in-israel__img--5 {
+  right: 0;
+  bottom: 0; }
+
+.live-in-israel__slide-control {
+  display: none; }
+
+@media (max-width: 1340px) {
+  .live-in-israel__wrapper {
+    max-width: 1152px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .live-in-israel__img img {
+    width: 100%;
+    height: auto; } }
+
+@media (max-width: 1150px) {
+  .live-in-israel__image-block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .live-in-israel__img--2 {
+    margin-right: 0; }
+  .live-in-israel__img {
+    margin-right: 20px;
+    margin-bottom: 20px; }
+    .live-in-israel__img:last-child {
+      margin-right: 0; }
+  .live-in-israel__img--3 {
+    margin-top: 0; }
+  .live-in-israel__img--4,
+  .live-in-israel__img--5 {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto; } }
+
+@media (max-width: 1023px) {
+  .live-in-israel {
+    background: none;
+    margin-bottom: 20px; }
+  .live-in-israel__wrapper {
+    padding-left: 0;
+    padding-right: 0; }
+  .live-in-israel__text-block {
+    margin-bottom: 25px; }
+  .live-in-israel__text {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px; }
+  .live-in-israel__img {
+    width: 288px;
+    height: 400px; }
+  .live-in-israel__img img {
+    width: 100%;
+    height: auto; }
+  .live-in-israel__image-block {
+    margin-top: 0; }
+  .live-in-israel__img--2 {
+    margin-top: 0; }
+  .live-in-israel__label {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    left: auto;
+    margin-left: auto;
+    margin-right: auto; }
+  .live-in-israel__img--2 .live-in-israel__label,
+  .live-in-israel__img--5 .live-in-israel__label {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); } }
+
+@media (max-width: 767px) {
+  .live-in-israel__img {
+    margin-right: 0;
+    margin-bottom: 0; }
+  .live-in-israel__img--2,
+  .live-in-israel__img--3,
+  .live-in-israel__img--4,
+  .live-in-israel__img--5 {
+    display: none; }
+  .live-in-israel__img img {
+    width: 288px;
+    height: 400px; }
+  .live-in-israel__slide-control {
+    display: block;
+    text-align: center; }
+  .live-in-israel__slide-point {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    background-color: #484848;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.2;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    cursor: pointer; }
+    .live-in-israel__slide-point:hover, .live-in-israel__slide-point:focus {
+      -webkit-transform: scale(1.4);
+              transform: scale(1.4);
+      opacity: 0.5; }
+    .live-in-israel__slide-point:active {
+      -webkit-transform: scale(0.8);
+              transform: scale(0.8); }
+  .live-in-israel__slide-point--current {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+    opacity: 1; } }
 
 .page-footer__wrapper {
   display: -webkit-box;
