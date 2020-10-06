@@ -84,9 +84,9 @@
 <circle cx="48" cy="48" r="32" fill="white"/>
 <path d="M58 47.5L43 57V38L58 47.5Z" fill="#1FC0FC"/>
 </symbol><symbol id="icon-review-arrow-left" viewBox="0 0 11 18">
-<path opacity="0.2" d="M10 1.5L2 9L10 16.5" stroke="#484848" stroke-width="2"/>
+<path d="M10 1.5L2 9L10 16.5" stroke-width="2"/>
 </symbol><symbol id="icon-review-arrow-right" viewBox="0 0 11 18">
-<path opacity="0.2" d="M1 16.5L9 9L0.999999 1.5" stroke="#484848" stroke-width="2"/>
+<path d="M1 16.5L9 9L0.999999 1.5" stroke-width="2"/>
 </symbol><symbol id="icon-success-order" viewBox="0 0 71 64">
 <rect x="3" y="3" width="58" height="58" rx="29" stroke="url(#paint0_linear)" stroke-width="6"/>
 <path d="M18 27.88L32.1972 43L66 7" stroke="url(#paint1_linear)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>

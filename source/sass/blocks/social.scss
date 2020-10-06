@@ -16,6 +16,10 @@
   }
 }
 
+.social__item--reviews {
+  margin-bottom: 0;
+}
+
 .social__link {
   &:hover svg,
   &:focus svg {
@@ -37,5 +41,10 @@
   .social__link svg {
     width: 32px;
     height: 32px;
+  }
+
+  .social__link--reviews svg {
+    width: 24px;
+    height: 24px;
   }
 }
