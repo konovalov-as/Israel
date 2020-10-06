@@ -10,6 +10,7 @@
   min-height: 906px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-size: cover;
     background-image: url("../img/bg-promo-desktop@2x.jpg");
   }
 }
@@ -93,6 +94,7 @@
   transition: transform 0.3s ease-in-out;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-size: contain;
     background-image: url("../img/bg-promo-scroll-desktop@2x.png");
   }
 

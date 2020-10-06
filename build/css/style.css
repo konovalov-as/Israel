@@ -406,6 +406,7 @@ input[type="radio"].visually-hidden {
   min-height: 906px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .page-header__wrapper {
+      background-size: cover;
       background-image: url("../img/bg-promo-desktop@2x.jpg"); } }
 
 .page-header__top {
@@ -486,6 +487,7 @@ input[type="radio"].visually-hidden {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .page-header__scroll {
+      background-size: contain;
       background-image: url("../img/bg-promo-scroll-desktop@2x.png"); } }
   .page-header__scroll:hover, .page-header__scroll:focus {
     -webkit-transform: scale(1.1);
