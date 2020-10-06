@@ -6,7 +6,7 @@
   background-image: url("../img/bg-backpack-desktop@1x.png");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-size: contain;
+    background-size: 147px auto;
     background-image: url("../img/bg-backpack-desktop@2x.png");
   }
 }

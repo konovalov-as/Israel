@@ -967,7 +967,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/bg-backpack-desktop@1x.png"); }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .want-to-go {
-      background-size: contain;
+      background-size: 147px auto;
       background-image: url("../img/bg-backpack-desktop@2x.png"); } }
 
 .want-to-go__phone {
