@@ -622,6 +622,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 96px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .about-program {
+      background-size: contain;
       background-image: url("../img/bg-about-desktop@2x.png"); } }
 
 .about-program__description {
