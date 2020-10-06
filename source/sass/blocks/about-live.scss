@@ -1,5 +1,6 @@
 .about-live {
   min-height: 583px;
+  margin-bottom: 136px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -63,6 +64,7 @@
 @media (max-width: $mobile-width-only) {
   .about-live {
     min-height: 272px;
+    margin-bottom: 80px;
     background-position: top center;
     background-image: url("../img/bg-live-israel-mobile@1x.jpg");
     background-size: cover;

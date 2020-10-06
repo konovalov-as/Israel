@@ -183,4 +183,13 @@
     });
   });
 
+  // faq accordion
+  var faqToggleButtons = document.querySelectorAll('.faq__arrow');
+  faqToggleButtons.forEach(function (faqButton) {
+    faqButton.addEventListener('click', function () {
+      faqButton.parentNode.querySelector('.faq__answer').classList.toggle('faq__answer--hidden');
+      faqButton.classList.toggle('faq__arrow--opened');
+    });
+  });
+
 })();
