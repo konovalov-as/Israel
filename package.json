@@ -53,6 +53,7 @@
   "dependencies": {
     "del": "^4.1.1",
     "gulp-uglify": "^3.0.2",
-    "gulp-w3c-html-validator": "^2.0.1"
+    "gulp-w3c-html-validator": "^2.0.1",
+    "jquery-mask-plugin": "^1.14.16"
   }
 }

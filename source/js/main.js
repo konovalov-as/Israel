@@ -9,7 +9,7 @@
     evt.preventDefault();
     orderModal.classList.add('modal--show');
     modalNameInput.focus();
-    modalNameInput.value = localStorage.getItem('modalNameInput');
+    modalNameInput.value = localStorage.getItem('nameInput');
     modalPhoneInput.value = localStorage.getItem('phoneInput');
   });
 
@@ -78,7 +78,7 @@
     }
     name.setCustomValidity('');
     addValidClass(formBlock);
-    localStorage.setItem('modalNameInput', modalNameInput.value);
+    localStorage.setItem('nameInput', name.value);
   };
 
   var validatePhone = function (phone, formBlock) {
@@ -87,11 +87,11 @@
       addInvalidClass(formBlock);
       return;
     }
-    if (phone.validity.patternMismatch) {
-      phone.setCustomValidity('Укажи 10 цифр номера телефона без 8 или +7');
-      addInvalidClass(formBlock);
-      return;
-    }
+    // if (phone.validity.patternMismatch) {
+    //   phone.setCustomValidity('Укажи номер телефона в формате +7 (000) 000 00 00 без  8 или +7');
+    //   addInvalidClass(formBlock);
+    //   return;
+    // }
     phone.setCustomValidity('');
     addValidClass(formBlock);
     localStorage.setItem('phoneInput', phone.value);
@@ -197,6 +197,9 @@
   var contactNameInput = contactForm.querySelector('#contact-name');
   var contactPhoneInput = contactForm.querySelector('#contact-phone');
 
+  contactNameInput.value = localStorage.getItem('nameInput');
+  contactPhoneInput.value = localStorage.getItem('phoneInput');
+
   contactNameInput.addEventListener('invalid', function () {
     validateName(contactNameInput, contactForm);
   });
@@ -220,5 +223,8 @@
     validatePhone(contactPhoneInput, contactForm);
     successModal.classList.add('modal--show');
   });
+
+  // jQuery Mask Plugin
+  $('#contact-phone').mask('+7 (000) 000 00 00');
 
 })();
