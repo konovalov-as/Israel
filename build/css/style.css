@@ -2101,7 +2101,17 @@ input[type="radio"].visually-hidden {
   display: flex; }
 
 .contacts__form-fields label {
-  margin-right: 24px; }
+  margin-right: 24px;
+  position: relative; }
+
+.contacts__form-fields svg {
+  width: 110px;
+  height: 1px;
+  margin-right: 24px;
+  position: absolute;
+  top: 45px;
+  left: 50px;
+  opacity: 0.2; }
 
 .contacts__form-fields input {
   width: 100%;
