@@ -19,6 +19,10 @@
   margin-bottom: 83px;
 }
 
+.title-h2--contacts-mb {
+  margin-bottom: 48px;
+}
+
 @media (max-width: $tablet-width-only) {
   .title-h2 {
     font-size: 32px;
@@ -33,6 +37,10 @@
 @media (max-width: $mobile-width-only) {
   .title-h2--mobile-center {
     text-align: center;
+  }
+
+  .title-h2--contacts-mb {
+    margin-bottom: 24px;
   }
 
   .title-h2--pt {

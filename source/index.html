@@ -540,14 +540,116 @@
               </div>
             </blockquote>
           </li>
-
           <!-- Вставить ещё пять слайдов -->
         </ul>
       </div>
-
     </section>
 
-
+    <section class="contacts container">
+      <div class="contacts__wrapper">
+        <div class="contacts__inner">
+          <div class="contacts__left">
+            <h2 class="title-h2 title-h2--contacts-mb title-h2--mobile-center">Узнать подробности</h2>
+            <div class="contacts__city-block">
+              <span class="contacts__city-label">Ваш город:</span>
+              <a class="contacts__city-link" href="#">новосибирск</a>
+            </div>
+            <div class="contacts__curator-block">
+              <div class="contacts__curator-row">
+                <div class="contacts__curator-avatar">
+                  <picture>
+                    <!-- 1х: 112px; 2x: 224px -->
+                    <source type="image/webp" srcset="img/curator-desktop@1x.webp 1x, img/curator-desktop@2x.webp 2x">
+                    <img src="img/curator-desktop@1x.png" srcset="img/curator-desktop@2x.png 2x" width="112"
+                      height="112" alt="Аватар куратора Анна Горелик">
+                  </picture>
+                </div>
+                <div class="contacts__curator-detail">
+                  <span class="contacts__curator-label">Ваш куратор:</span>
+                  <span class="contacts__curator-name">Анна Горелик</span>
+                  <p class="contacts__address">
+                    Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»
+                  </p>
+                  <ul class="contacts__curator-social-list">
+                    <li class="contacts__curator-social-item">
+                      <a class="contacts__curator-social-link" href="#">
+                        <span class="visually-hidden">Мы в Facebook</span>
+                        <svg width="24" height="24">
+                          <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="contacts__curator-social-item">
+                      <a class="contacts__curator-social-link" href="#">
+                        <span class="visually-hidden">Мы в WhatsApp</span>
+                        <svg width="24" height="24">
+                          <use xlink:href="img/sprite_auto.svg#icon-whatsapp"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="contacts__curator-social-item">
+                      <a class="contacts__curator-social-link" href="#">
+                        <span class="visually-hidden">Мы в Telegram</span>
+                        <svg width="24" height="24">
+                          <use xlink:href="img/sprite_auto.svg#icon-telegram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="contacts__curator-row">
+                <p class="contacts__text">
+                  Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с
+                  куратором, узнайте подробнее о программах и выберите свою!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__right">
+            <div class="contacts__map">
+              <!-- 1х: 702px; 2x: 1404px -->
+              <!-- 1х: 320px; 2x: 640px -->
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+                <img src="img/map-desktop@1x.png" srcset="map-desktop@2x.png 2x" width="702" height="448"
+                  alt="Офис компании расположен в городе Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__footer">
+          <div class="contacts__footer-to-do">
+            <p class="contacts__footer-title">
+              Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
+            </p>
+            <p class="contacts__footer-text">
+              Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
+            </p>
+          </div>
+          <div class="contacts__footer-form">
+            <form class="contacts__form" action="https://echo.htmlacademy.ru" method="post">
+              <div class="contacts__form-fields">
+                <label>
+                  <span class="visually-hidden">Ваше имя</span>
+                  <input type="text" id="contact-name" name="contact-name" placeholder="Имя" required minlength="2">
+                </label>
+                <label>
+                  <span class="visually-hidden">Ваш номер телефона</span>
+                  <input type="tel" id="contact-phone" name="contact-phone" placeholder="Телефон" required
+                    pattern="[0-9]{10}">
+                </label>
+              </div>
+              <div class="contacts__submit-block">
+                <button type="submit">перезвоните мне</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">

@@ -192,4 +192,33 @@
     });
   });
 
+  // validate form in section contacts
+  var contactForm = document.querySelector('.contacts__form');
+  var contactNameInput = contactForm.querySelector('#contact-name');
+  var contactPhoneInput = contactForm.querySelector('#contact-phone');
+
+  contactNameInput.addEventListener('invalid', function () {
+    validateName(contactNameInput, contactForm);
+  });
+
+  contactNameInput.addEventListener('input', function () {
+    validateName(contactNameInput, contactForm);
+  });
+
+  contactPhoneInput.addEventListener('invalid', function () {
+    validatePhone(contactPhoneInput, contactForm);
+  });
+
+  contactPhoneInput.addEventListener('input', function () {
+    validatePhone(contactPhoneInput, contactForm);
+  });
+
+  // submit contact form
+  contactForm.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    validateName(contactNameInput, contactForm);
+    validatePhone(contactPhoneInput, contactForm);
+    successModal.classList.add('modal--show');
+  });
+
 })();
