@@ -1930,6 +1930,9 @@ input[type="radio"].visually-hidden {
   display: -ms-flexbox;
   display: flex; }
 
+.reviews__item--slide:not(:first-child) {
+  display: none; }
+
 .reviews__image {
   margin-right: 40px; }
 
