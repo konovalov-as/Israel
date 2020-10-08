@@ -1,7 +1,10 @@
 .want-to-go {
+  margin-bottom: 290px;
+}
+
+.want-to-go__wrapper {
   position: relative;
-  margin-bottom: 291px;
-  background-position: left 130px;
+  background-position: left 135px;
   background-repeat: no-repeat;
   background-image: url("../img/bg-backpack-desktop@1x.png");
 
@@ -15,7 +18,7 @@
   max-width: 477px;
   margin-left: 210px;
   margin-bottom: 131px;
-  padding-top: 209px;
+  padding-top: 212px;
 }
 
 .want-to-go__text {
@@ -37,13 +40,14 @@
   font-size: 17px;
   line-height: 20px;
   opacity: 0.5;
-  text-transform: uppercase;
+  text-transform: lowercase;
+  font-variant: small-caps;
   border: 2px solid #e3e3e3;
   border-radius: 80px;
-  padding-top: 19px;
-  padding-bottom: 20px;
+  padding-top: 17px;
+  padding-bottom: 19px;
   padding-left: 40px;
-  padding-right: 40px;
+  padding-right: 70px;
 
   &:hover,
   &:focus {
@@ -63,11 +67,12 @@
   position: absolute;
   top: 0;
   right: 0;
-  min-height: 63.4px;
   font-weight: 500;
   font-size: 17px;
   line-height: 20px;
-  text-transform: uppercase;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: -0.5px;
   color: white;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   border: none;
@@ -128,9 +133,10 @@
 @media (max-width: $mobile-width-only) {
   .want-to-go {
     position: static;
-    margin-bottom: 80px;
+    margin-bottom: 44px;
     padding-bottom: 0;
-    background-position: left -10px;
+    background-repeat: no-repeat;
+    background-position: left -11px;
     background-image: url("../img/bg-backpack-mobile@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -139,9 +145,18 @@
     }
   }
 
+  .want-to-go__wrapper {
+    background: none;
+  }
+
+  .want-to-go__text {
+    max-width: 100%;
+  }
+
   .want-to-go__phone {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: -1px;
   }
 
   .want-to-go__form {
@@ -155,13 +170,17 @@
   }
 
   .want-to-go__form button {
+    display: block;
+    margin: 0 auto;
     position: static;
-    width: 100%;
+    width: 92%;
   }
 
   .want-to-go__image {
     position: static;
     text-align: center;
+    margin-left: -16px;
+    margin-right: -15px;
   }
 
   .want-to-go__image img {
