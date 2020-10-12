@@ -83,6 +83,8 @@
   padding-left: 40px;
   padding-right: 40px;
   cursor: pointer;
+  box-shadow: none;
+  outline-color: transparent;
 
   &:hover,
   &:focus {

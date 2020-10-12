@@ -219,10 +219,13 @@
 
 .contacts__form {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .contacts__form-fields {
   display: flex;
+  margin-bottom: 10px;
 }
 
 .contacts__form-fields label {
@@ -259,6 +262,8 @@
   padding-bottom: 16px;
   padding-left: 37px;
   padding-right: 20px;
+  box-shadow: none;
+  outline-color: transparent;
 
   &:hover,
   &:focus {

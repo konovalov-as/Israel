@@ -83,7 +83,7 @@
     padding-bottom: 0;
     background-position: center 41px;
     background-image: url("../img/bg-live-israel-mobile@1x.jpg");
-    background-size: auto 272px;
+    background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-live-israel-mobile@2x.jpg");
@@ -118,8 +118,8 @@
   }
 }
 
-@media (max-width: $mobile-width) {
-  .about-live {
+@media (max-width: 320px) {
+  .about-live__wrapper {
     background-size: contain;
   }
 }

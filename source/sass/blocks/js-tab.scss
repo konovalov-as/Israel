@@ -6,6 +6,10 @@
   display: block;
 }
 
-.js-tab--active {
-  border-color: red;
+.js-tab.js-tab--active {
+  background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+
+  &::after {
+    border-left: 30px solid #ffd701;
+  }
 }

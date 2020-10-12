@@ -50,7 +50,7 @@
 
   &:hover::after,
   &:focus::after {
-    border-left: 30px solid #ffd701;
+    border-left-color: #ffd701;
   }
 
   &:active::after {

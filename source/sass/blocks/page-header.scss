@@ -4,14 +4,18 @@
 
 .page-header__wrapper {
   background-repeat: no-repeat;
-  background-position: center;
-  background-color: #c4c4c4;
-  background-image: url("../img/bg-promo-desktop@1x.jpg");
-  min-height: 906px;
+  background-position: center top, center 160px, center top;
+  background-color: #e5c9b4;
+  background-size: cover, auto 340px, contain;
+  background-image: url("../img/bg-promo-girl-desktop@1x.png"),
+    url("../img/bg-promo-label-desktop@1x.png"),
+    url("../img/bg-promo-city-desktop@1x.jpg");
+  min-height: 879px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-size: cover;
-    background-image: url("../img/bg-promo-desktop@2x.jpg");
+    background-image: url("../img/bg-promo-girl-desktop@2x.png"),
+      url("../img/bg-promo-label-desktop@2x.png"),
+      url("../img/bg-promo-city-desktop@2x.jpg");
   }
 }
 
@@ -93,6 +97,7 @@
   margin: 0 auto;
   padding: 0;
   cursor: pointer;
+  outline: none;
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
@@ -114,13 +119,15 @@
   }
 }
 
+@media (max-width: 1370px) {
+  .page-header__wrapper {
+    background-size: cover, contain, cover;
+  }
+}
+
 @media (max-width: $tablet-width-only) {
   .page-header {
     padding: 0 calc(50% - 511.5px);
-  }
-
-  .page-header__wrapper {
-    background-size: cover;
   }
 
   .page-header__promo {

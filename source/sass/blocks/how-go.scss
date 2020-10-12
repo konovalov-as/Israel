@@ -53,11 +53,24 @@
 }
 
 .how-go__list {
+  position: relative;
   max-width: 490px;
   margin: 0;
   margin-bottom: 48px;
   padding: 0;
   counter-reset: howGoCounter;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 1px;
+    height: 95%;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-image: url("../img/icon-dotted-line.svg");
+  }
 }
 
 .how-go__item {
