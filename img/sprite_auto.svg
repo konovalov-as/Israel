@@ -52,6 +52,8 @@
 </symbol><symbol id="icon-close" viewBox="0 0 18 17">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.48467 8.5L0 1.50703L1.41767 2.46254e-07L9 7.08422L16.5823 0L18 1.50703L10.5153 8.5L18 15.493L16.5823 17L9 9.91578L1.41767 17L6.13436e-07 15.493L7.48467 8.5Z" fill="url(#paint0_linear)"/>
 
+</symbol><symbol id="icon-dotted-line" viewBox="0 0 2 193">
+<path opacity="0.2" d="M1 0.5V193" stroke="#484848" stroke-dasharray="4 4"/>
 </symbol><symbol id="icon-facebook" viewBox="0 0 24 24">
 <path d="M15.5378 5.18705H17.4V1.94345C17.0787 1.89925 15.9738 1.7998 14.687 1.7998C12.0021 1.7998 10.1629 3.48875 10.1629 6.59296V9.44981H7.20001V13.0759H10.1629V22.1998H13.7955V13.0768H16.6385L17.0898 9.45066H13.7946V6.95251C13.7955 5.90445 14.0776 5.18705 15.5378 5.18705Z"/>
 </symbol><symbol id="icon-faq-arrow-down" viewBox="0 0 17 11">
