@@ -462,8 +462,9 @@ input[type="radio"].visually-hidden {
   font-variant: small-caps;
   border-bottom: 1px dashed #484848;
   word-break: break-all;
-  white-space: pre-wrap;
-  max-width: 250px; }
+  white-space: pre;
+  max-width: 250px;
+  word-wrap: break-word; }
 
 .page-header__promo {
   max-width: 360px;
