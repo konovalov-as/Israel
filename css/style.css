@@ -1131,7 +1131,8 @@ input[type="radio"].visually-hidden {
   outline-color: transparent;
   word-break: break-all;
   white-space: pre-wrap;
-  max-width: 250px; }
+  max-width: 250px;
+  word-wrap: break-word; }
   .want-to-go__form button:hover, .want-to-go__form button:focus {
     background: linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%); }
   .want-to-go__form button:active {
@@ -1701,7 +1702,8 @@ input[type="radio"].visually-hidden {
   font-variant: small-caps;
   word-break: break-all;
   white-space: pre-wrap;
-  max-width: 250px; }
+  max-width: 250px;
+  word-wrap: break-word; }
 
 .about-live__link svg {
   width: 24px;
@@ -2441,7 +2443,8 @@ ul .reviews__item--social {
   cursor: pointer;
   word-break: break-all;
   white-space: pre-wrap;
-  max-width: 250px; }
+  max-width: 250px;
+  word-wrap: break-word; }
   .contacts__form button:hover, .contacts__form button:focus {
     background: linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%); }
   .contacts__form button:active {
