@@ -206,7 +206,7 @@
   // faq accordion
   var faqToggleButtons = document.querySelectorAll('.faq__arrow');
   for (let faqIndex = 0; faqIndex < faqToggleButtons.length; faqIndex++) {
-    let faqButton =  faqToggleButtons[faqIndex];
+    let faqButton = faqToggleButtons[faqIndex];
     faqButton.addEventListener('click', function () {
       faqButton.parentNode.querySelector('.faq__answer').classList.toggle('faq__answer--hidden');
       // faqButton.classList.toggle('faq__arrow--opened');
@@ -244,6 +244,40 @@
     validatePhone(contactPhoneInput, contactForm);
     successModal.classList.add('modal--show');
   });
+
+  // slider reviews
+  var reviewPrevButtons = document.querySelectorAll('.reviews__buttons--previous');
+  var reviewNextButtons = document.querySelectorAll('.reviews__buttons--next');
+  var reviewSlides = document.querySelectorAll('.reviews__item--slide');
+
+  var reviewSlide = 0;
+
+  for (var reviewPrevButton = 0; reviewPrevButton < reviewPrevButtons.length; reviewPrevButton++) {
+    reviewPrevButtons[reviewPrevButton].addEventListener('click', function () {
+      reviewSlides[reviewSlide].classList.remove('reviews__item--showed');
+      reviewSlide--;
+      if (reviewSlide < 0) {
+        reviewSlide = reviewSlides.length - 1;
+      }
+      var reviewCounter = reviewSlides[reviewSlide].querySelector('.reviews__counter-value');
+      reviewCounter.innerHTML = '';
+      reviewSlides[reviewSlide].classList.add('reviews__item--showed');
+    });
+  }
+
+  for (var reviewNextButton = 0; reviewNextButton < reviewNextButtons.length; reviewNextButton++) {
+    reviewNextButtons[reviewNextButton].addEventListener('click', function () {
+      reviewSlides[reviewSlide].classList.remove('reviews__item--showed');
+      reviewSlide++;
+      if (reviewSlide >= reviewSlides.length) {
+        reviewSlide = 0;
+      }
+      reviewSlides[reviewSlide].classList.add('reviews__item--showed');
+    });
+  }
+
+  // slider live in Israel
+
 
   // jQuery Mask Plugin
   $('#contact-phone').mask('+7 (000) 000 00 00');
