@@ -460,7 +460,10 @@ input[type="radio"].visually-hidden {
 .page-header__order {
   text-transform: lowercase;
   font-variant: small-caps;
-  border-bottom: 1px dashed #484848; }
+  border-bottom: 1px dashed #484848;
+  word-break: break-all;
+  white-space: pre-wrap;
+  max-width: 250px; }
 
 .page-header__promo {
   max-width: 360px;
@@ -1124,7 +1127,10 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
   -webkit-box-shadow: none;
           box-shadow: none;
-  outline-color: transparent; }
+  outline-color: transparent;
+  word-break: break-all;
+  white-space: pre-wrap;
+  max-width: 250px; }
   .want-to-go__form button:hover, .want-to-go__form button:focus {
     background: linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%); }
   .want-to-go__form button:active {
@@ -1691,7 +1697,10 @@ input[type="radio"].visually-hidden {
   padding-left: 25px;
   text-decoration: none;
   text-transform: lowercase;
-  font-variant: small-caps; }
+  font-variant: small-caps;
+  word-break: break-all;
+  white-space: pre-wrap;
+  max-width: 250px; }
 
 .about-live__link svg {
   width: 24px;
@@ -2428,7 +2437,10 @@ ul .reviews__item--social {
   text-transform: lowercase;
   font-variant: small-caps;
   color: white;
-  cursor: pointer; }
+  cursor: pointer;
+  word-break: break-all;
+  white-space: pre-wrap;
+  max-width: 250px; }
   .contacts__form button:hover, .contacts__form button:focus {
     background: linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%); }
   .contacts__form button:active {

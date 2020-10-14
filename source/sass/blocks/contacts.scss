@@ -301,6 +301,9 @@
   font-variant: small-caps;
   color: white;
   cursor: pointer;
+  word-break: break-all;
+  white-space: pre-wrap;
+  max-width: 250px;
 
   &:hover,
   &:focus {

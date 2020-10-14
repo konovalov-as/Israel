@@ -74,6 +74,9 @@
   text-transform: lowercase;
   font-variant: small-caps;
   border-bottom: 1px dashed #484848;
+  word-break: break-all;
+  white-space: pre-wrap;
+  max-width: 250px;
 }
 
 .page-header__promo {

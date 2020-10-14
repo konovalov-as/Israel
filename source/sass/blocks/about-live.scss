@@ -48,6 +48,10 @@
   text-decoration: none;
   text-transform: lowercase;
   font-variant: small-caps;
+  word-break: break-all;
+  white-space: pre-wrap;
+  max-width: 250px;
+
 }
 
 .about-live__link svg {
