@@ -1130,7 +1130,7 @@ input[type="radio"].visually-hidden {
           box-shadow: none;
   outline-color: transparent;
   word-break: break-all;
-  white-space: pre-wrap;
+  white-space: pre;
   max-width: 250px;
   word-wrap: break-word; }
   .want-to-go__form button:hover, .want-to-go__form button:focus {
@@ -1701,7 +1701,7 @@ input[type="radio"].visually-hidden {
   text-transform: lowercase;
   font-variant: small-caps;
   word-break: break-all;
-  white-space: pre-wrap;
+  white-space: pre;
   max-width: 250px;
   word-wrap: break-word; }
 
@@ -2442,7 +2442,7 @@ ul .reviews__item--social {
   color: white;
   cursor: pointer;
   word-break: break-all;
-  white-space: pre-wrap;
+  white-space: pre;
   max-width: 250px;
   word-wrap: break-word; }
   .contacts__form button:hover, .contacts__form button:focus {
