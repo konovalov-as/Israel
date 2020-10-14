@@ -17,6 +17,8 @@
 }
 
 .reviews__list {
+  position: relative;
+  min-height: 483px;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 98px;
@@ -30,9 +32,16 @@
 }
 
 .reviews__item--slide {
-  &:not(:first-child) {
-    display: none;
-  }
+  width: 100%;
+  position: absolute;
+  left: 0;
+  // z-index: 10;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.reviews__item--showed {
+  opacity: 1;
 }
 
 .reviews__image {
