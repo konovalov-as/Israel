@@ -39,7 +39,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 230px;
   margin: 0;
   padding-top: 18px;
   padding-bottom: 17px;
@@ -48,10 +47,7 @@
   text-decoration: none;
   text-transform: lowercase;
   font-variant: small-caps;
-  word-break: break-all;
-  white-space: pre-wrap;
   max-width: 250px;
-
 }
 
 .about-live__link svg {

@@ -43,9 +43,10 @@
   text-transform: lowercase;
   font-variant: small-caps;
   border: 2px solid #e3e3e3;
+  min-height: 59px;
   border-radius: 80px;
-  padding-top: 17px;
-  padding-bottom: 19px;
+  padding-top: 14px;
+  padding-bottom: 16px;
   padding-left: 40px;
   padding-right: 70px;
 
@@ -85,8 +86,6 @@
   cursor: pointer;
   box-shadow: none;
   outline-color: transparent;
-  word-break: break-all;
-  white-space: pre-wrap;
   max-width: 250px;
 
   &:hover,

@@ -42,6 +42,10 @@
     font-size: 14px;
     line-height: 22px;
   }
+
+  .program__description--2 {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: $mobile-width-only) {

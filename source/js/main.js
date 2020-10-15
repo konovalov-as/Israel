@@ -17,7 +17,7 @@
 
   // close modal by close button
   var modalCloseButtons = document.querySelectorAll('.modal__close');
-  for (let closeButton = 0; closeButton < modalCloseButtons.length; closeButton++) {
+  for (var closeButton = 0; closeButton < modalCloseButtons.length; closeButton++) {
     modalCloseButtons[closeButton].addEventListener('click', function () {
       orderModal.classList.remove('modal--show');
       successModal.classList.remove('modal--show');
@@ -35,19 +35,21 @@
   // by Esc key
   var modals = document.querySelectorAll('.modal');
   document.addEventListener('keydown', function (evt) {
-    if (evt.key !== 'Escape') {
+    if (evt.keyCode !== 27) {
       return;
     }
-    for (let modal = 0; modal < modals.length; modal++) {
-      let currentModal = modals[modal];
-      currentModal.classList.remove('modal--show');
+    // if (evt.key !== 'Escape') {
+    //   return;
+    // }
+    for (var modalIndex = 0; modalIndex < modals.length; modalIndex++) {
+      modals[modalIndex].classList.remove('modal--show');
     }
     bodyPage.classList.remove('modal--open');
   });
 
   // by click overlay
-  for (let modal = 0; modal < modals.length; modal++) {
-    let currentModal = modals[modal];
+  for (let modalIndex2 = 0; modalIndex2 < modals.length; modalIndex2 ++) {
+    let currentModal = modals[modalIndex2];
     currentModal.addEventListener('click', function (evt) {
       if (evt.target.classList[0] !== 'modal') {
         return;
@@ -178,13 +180,13 @@
 
   function hideTabs() {
     var tabs = document.querySelectorAll('.js-tab--content');
-    for (let tab = 0; tab < tabs.length; tab++) {
+    for (var tab = 0; tab < tabs.length; tab++) {
       tabs[tab].classList.add('js-tab--hide');
     }
   }
 
   var tabButtons = document.querySelectorAll('button.js-tab');
-  for (let tabButtonIndex = 0; tabButtonIndex < tabButtons.length; tabButtonIndex++) {
+  for (var tabButtonIndex = 0; tabButtonIndex < tabButtons.length; tabButtonIndex++) {
     tabButtons[tabButtonIndex].addEventListener('click', showTab);
   }
 
@@ -192,7 +194,7 @@
 
   // go to tab
   var cards = document.querySelectorAll('.places-visit__link');
-  for (let card; card < cards.length; card++) {
+  for (var card; card < cards.length; card++) {
     cards[card].addEventListener('click', function (evt) {
       hideCurrentTab();
       var tabTargetId = evt.target.closest('.places-visit__link').attributes.href.value.slice(1);
@@ -250,7 +252,14 @@
   var reviewNextButtons = document.querySelectorAll('.reviews__buttons--next');
   var reviewSlides = document.querySelectorAll('.reviews__item--slide');
 
-  var reviewSlide = 0;
+  var reviewSlide = 2;
+  var reviewCounters = document.querySelectorAll('.reviews__counter .reviews__counter-value');
+
+  function setReviewCounter() {
+    for (var reviewIndex = 0; reviewIndex < reviewCounters.length; reviewIndex++) {
+      reviewCounters[reviewIndex].textContent = reviewSlide + 1 + ' / ' + reviewSlides.length;
+    }
+  }
 
   for (var reviewPrevButton = 0; reviewPrevButton < reviewPrevButtons.length; reviewPrevButton++) {
     reviewPrevButtons[reviewPrevButton].addEventListener('click', function () {
@@ -259,8 +268,7 @@
       if (reviewSlide < 0) {
         reviewSlide = reviewSlides.length - 1;
       }
-      var reviewCounter = reviewSlides[reviewSlide].querySelector('.reviews__counter-value');
-      reviewCounter.innerHTML = '';
+      setReviewCounter();
       reviewSlides[reviewSlide].classList.add('reviews__item--showed');
     });
   }
@@ -272,12 +280,44 @@
       if (reviewSlide >= reviewSlides.length) {
         reviewSlide = 0;
       }
+      setReviewCounter();
       reviewSlides[reviewSlide].classList.add('reviews__item--showed');
     });
   }
 
   // slider live in Israel
+  var startIsraelSlider = function () {
+    $('.live-in-israel__image-block').slick({
+      dots: true,
+      infinite: false,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 9999,
+          settings: "unslick",
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          }
+        },
+      ]
+    });
+  }
 
+  $(window).on('load resize', function () {
+    var withWindow = window.innerWidth;
+    if (withWindow < 767) {
+      startIsraelSlider();
+    }
+  });
 
   // jQuery Mask Plugin
   $('#contact-phone').mask('+7 (000) 000 00 00');
