@@ -39,7 +39,7 @@
   list-style: none;
   align-items: center;
   border-bottom: 1px solid rgba(72, 72, 72, 0.2);
-  margin-bottom: 6px;
+
 
   &::before {
     position: absolute;
@@ -90,13 +90,20 @@
   display: none;
 }
 
-.faq__arrow {
-  margin-left: 20px;
-  margin-right: 36px;
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
+.faq__arrow-link {
+  width: 100%;
+  color: $base-color;
+  text-decoration: none;
+  padding-bottom: 6px;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(72, 72, 72, 0.1);
+  }
+
+  &:active {
+    color: #1fc0fc;
+  }
 
   &:hover svg,
   &:focus svg {
@@ -108,7 +115,13 @@
   }
 }
 
-.faq__arrow--opened svg {
+.faq__arrow {
+  margin-left: 20px;
+  margin-right: 36px;
+  background-color: transparent;
+}
+
+.faq__arrow-link--opened svg {
   transform: rotate(180deg);
 }
 

@@ -35,13 +35,13 @@
   width: 100%;
   position: absolute;
   left: 0;
-  z-index: 10;
   opacity: 0;
   transition: opacity 1s;
 }
 
 .reviews__item--showed {
   opacity: 1;
+  z-index: 10;
 }
 
 .reviews__image {

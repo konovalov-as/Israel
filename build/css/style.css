@@ -2024,8 +2024,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid rgba(72, 72, 72, 0.2);
-  margin-bottom: 6px; }
+  border-bottom: 1px solid rgba(72, 72, 72, 0.2); }
   .faq__item::before {
     position: absolute;
     top: 16px;
@@ -2074,20 +2073,27 @@ input[type="radio"].visually-hidden {
 .faq__answer--hidden {
   display: none; }
 
+.faq__arrow-link {
+  width: 100%;
+  color: #484848;
+  text-decoration: none;
+  padding-bottom: 6px; }
+  .faq__arrow-link:hover, .faq__arrow-link:focus {
+    background-color: rgba(72, 72, 72, 0.1); }
+  .faq__arrow-link:active {
+    color: #1fc0fc; }
+  .faq__arrow-link:hover svg,
+  .faq__arrow-link:focus svg {
+    stroke: #ffc341; }
+  .faq__arrow-link:active svg {
+    stroke: #1fc0fc; }
+
 .faq__arrow {
   margin-left: 20px;
   margin-right: 36px;
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer; }
-  .faq__arrow:hover svg,
-  .faq__arrow:focus svg {
-    stroke: #ffc341; }
-  .faq__arrow:active svg {
-    stroke: #1fc0fc; }
+  background-color: transparent; }
 
-.faq__arrow--opened svg {
+.faq__arrow-link--opened svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
 
@@ -2197,13 +2203,13 @@ input[type="radio"].visually-hidden {
   width: 100%;
   position: absolute;
   left: 0;
-  z-index: 10;
   opacity: 0;
   -webkit-transition: opacity 1s;
   transition: opacity 1s; }
 
 .reviews__item--showed {
-  opacity: 1; }
+  opacity: 1;
+  z-index: 10; }
 
 .reviews__image {
   margin-right: 40px; }

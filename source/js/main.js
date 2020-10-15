@@ -148,6 +148,7 @@
   // validate phone into want to go block
   var wantGoForm = document.querySelector('.want-to-go__form');
   var goPhoneInput = wantGoForm.querySelector('#go-phone');
+  goPhoneInput.value = localStorage.getItem('phoneInput');
 
   goPhoneInput.addEventListener('invalid', function () {
     validatePhone(goPhoneInput, wantGoForm);
@@ -206,12 +207,13 @@
   }
 
   // faq accordion
-  var faqToggleButtons = document.querySelectorAll('.faq__arrow');
+  var faqToggleButtons = document.querySelectorAll('.faq__arrow-link');
   for (let faqIndex = 0; faqIndex < faqToggleButtons.length; faqIndex++) {
     let faqButton = faqToggleButtons[faqIndex];
-    faqButton.addEventListener('click', function () {
+    faqButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
       faqButton.parentNode.querySelector('.faq__answer').classList.toggle('faq__answer--hidden');
-      // faqButton.classList.toggle('faq__arrow--opened');
+      faqButton.classList.toggle('faq__arrow-link--opened');
     });
   }
 
@@ -322,5 +324,6 @@
   // jQuery Mask Plugin
   $('#contact-phone').mask('+7 (000) 000 00 00');
   $('#go-phone').mask('+7 (000) 000 00 00');
+  $('#modal-phone').mask('+7 (000) 000 00 00');
 
 })();
