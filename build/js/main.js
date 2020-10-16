@@ -244,41 +244,28 @@
   });
 
   // slider reviews
-  var reviewPrevButtons = document.querySelectorAll('.reviews__buttons--previous');
-  var reviewNextButtons = document.querySelectorAll('.reviews__buttons--next');
-  var reviewSlides = document.querySelectorAll('.reviews__item--slide');
+  var $slider = $('.reviews__list');
+  if ($slider.length) {
+    var currentSlide;
+    var slidesCount;
+    var sliderCounter = document.createElement('div');
+    sliderCounter.classList.add('slider__counter');
 
-  var reviewSlide = 2;
-  var reviewCounters = document.querySelectorAll('.reviews__counter .reviews__counter-value');
+    var updateSliderCounter = function (slick) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + '/' + slidesCount);
+    };
 
-  function setReviewCounter() {
-    for (var reviewIndex = 0; reviewIndex < reviewCounters.length; reviewIndex++) {
-      reviewCounters[reviewIndex].textContent = reviewSlide + 1 + ' / ' + reviewSlides.length;
-    }
-  }
-
-  for (var reviewPrevButton = 0; reviewPrevButton < reviewPrevButtons.length; reviewPrevButton++) {
-    reviewPrevButtons[reviewPrevButton].addEventListener('click', function () {
-      reviewSlides[reviewSlide].classList.remove('reviews__item--showed');
-      reviewSlide--;
-      if (reviewSlide < 0) {
-        reviewSlide = reviewSlides.length - 1;
-      }
-      setReviewCounter();
-      reviewSlides[reviewSlide].classList.add('reviews__item--showed');
+    $slider.on('init', function (event, slick) {
+      $slider.append(sliderCounter);
+      updateSliderCounter(slick);
     });
-  }
 
-  for (var reviewNextButton = 0; reviewNextButton < reviewNextButtons.length; reviewNextButton++) {
-    reviewNextButtons[reviewNextButton].addEventListener('click', function () {
-      reviewSlides[reviewSlide].classList.remove('reviews__item--showed');
-      reviewSlide++;
-      if (reviewSlide >= reviewSlides.length) {
-        reviewSlide = 0;
-      }
-      setReviewCounter();
-      reviewSlides[reviewSlide].classList.add('reviews__item--showed');
+    $slider.on('afterChange', function (event, slick, affterCurrentSlide) {
+      updateSliderCounter(slick, affterCurrentSlide);
     });
+    $slider.slick();
   }
 
   // slider live in Israel

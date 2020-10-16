@@ -427,6 +427,7 @@
 
   .contacts__form-fields {
     display: block;
+    margin-bottom: 1px;
   }
 
   .contacts__form-fields svg {
@@ -444,7 +445,8 @@
   }
 
   .contacts__submit-block button {
-    width: 100%;
+    max-width: 100%;
+    width: 99%;
   }
 
   .contacts__right {

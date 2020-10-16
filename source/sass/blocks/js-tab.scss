@@ -8,6 +8,12 @@
 
 .js-tab.js-tab--active {
   background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+  color: white;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 
   &::after {
     border-left: 30px solid #ffd701;

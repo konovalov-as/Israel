@@ -1,0 +1,109 @@
+.slick-arrow {
+  z-index: 10;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  top: 93.5%;
+  width: 8px;
+  height: 15px;
+  opacity: 0.2;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &::before {
+    content: none;
+  }
+}
+
+.slick-prev {
+  left: 38%;
+  background-image: url("../img/icon-review-arrow-left.svg");
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-image: url("../img/icon-review-arrow-left.svg");
+  }
+}
+
+.slick-next {
+  left: 41%;
+  background-image: url("../img/icon-review-arrow-right.svg");
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-image: url("../img/icon-review-arrow-right.svg");
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .slick-dots li {
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+
+  .slick-dots li button {
+    width: 6px;
+    height: 6px;
+    margin-right: 8px;
+    padding: 0;
+    background-color: $base-color;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.2;
+    transition: transform 0.3s ease-in-out;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+
+  .slick-dots li.slick-active button {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+    opacity: 1;
+  }
+
+  .slick-slide:focus {
+    outline: none;
+  }
+
+  .slick-slide:active {
+    outline: none;
+  }
+
+  .slick-dots {
+    bottom: -19px;
+    left: 4px;
+  }
+
+  .slick-dotted.slick-slider {
+    margin-bottom: 22px;
+  }
+}

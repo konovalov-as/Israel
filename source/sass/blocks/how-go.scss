@@ -176,6 +176,10 @@
 }
 
 @media (max-width: $mobile-width-only) {
+  .how-go {
+    padding-right: 10px;
+  }
+
   .how-go__wrapper {
     margin-left: 0;
     margin-right: 0;
@@ -200,7 +204,7 @@
 
   .how-go__description {
     max-width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   .how-go__to-do {

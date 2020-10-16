@@ -20,7 +20,7 @@
 }
 
 .live-in-israel__text {
-  max-width: 720px;
+  max-width: 710px;
   margin-top: 0;
   margin-bottom: 14px;
   margin-left: auto;
@@ -29,6 +29,7 @@
   line-height: 29px;
   text-align: right;
   opacity: 0.87;
+  letter-spacing: 0.1px;
 }
 
 .live-in-israel__img {
@@ -273,6 +274,11 @@
     margin: 0 auto;
   }
 
+  .live-in-israel__img--1 .live-in-israel__label {
+    max-width: 220px;
+    width: 100%;
+  }
+
   .live-in-israel__label,
   .live-in-israel__img--3 .live-in-israel__label,
   .live-in-israel__img--4 .live-in-israel__label {
@@ -291,51 +297,4 @@
     background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
     opacity: 1;
   }
-}
-
-.slick-dots li {
-  margin: 0;
-  width: auto;
-  height: auto;
-}
-
-.slick-dots li button {
-  width: 6px;
-  height: 6px;
-  margin-right: 8px;
-  padding: 0;
-  background-color: $base-color;
-  border: none;
-  border-radius: 50%;
-  opacity: 0.2;
-  transition: transform 0.3s ease-in-out;
-
-  &::before {
-    display: none;
-  }
-
-  &:hover,
-  &:focus {
-    transform: scale(1.2);
-    opacity: 0.5;
-  }
-
-  &:active {
-    transform: scale(0.8);
-  }
-}
-
-.slick-dots li.slick-active button {
-  width: 8px;
-  height: 8px;
-  background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
-  opacity: 1;
-}
-
-.slick-slide:focus {
-  outline: none;
-}
-
-.slick-slide:active {
-  outline: none;
 }
