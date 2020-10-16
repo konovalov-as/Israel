@@ -165,7 +165,8 @@
           <form class="want-to-go__form" action="https://echo.htmlacademy.ru" method="post">
             <label>
               <span class="visually-hidden">Ваш номер телефона</span>
-              <input type="tel" id="go-phone" name="go-phone" placeholder="Телефон" required>
+              <input type="tel" id="go-phone" name="go-phone" placeholder="Телефон" required
+                pattern="\+7 \(\d{3}\) \d{3} \d{2} \d{2}">
             </label>
             <button type="submit">перезвоните&nbsp;мне</button>
           </form>
@@ -1202,7 +1203,8 @@
           </label>
           <label>
             <span class="visually-hidden">Ваш номер телефона</span>
-            <input type="tel" id="modal-phone" name="modal-phone" placeholder="Телефон" required tabindex="3">
+            <input type="tel" id="modal-phone" name="modal-phone" placeholder="Телефон" required tabindex="3"
+              pattern="\+7 \(\d{3}\) \d{3} \d{2} \d{2}">
           </label>
         </div>
         <div class="modal__submit-block">

@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var bodyPage = document.querySelector('.body')
+  var bodyPage = document.querySelector('.body');
   var callOrderButton = document.querySelector('.page-header__order');
   var orderModal = document.querySelector('.modal--order');
 
@@ -35,7 +35,7 @@
   // by Esc key
   var modals = document.querySelectorAll('.modal');
   document.addEventListener('keydown', function (evt) {
-    if (evt.keyCode !== 27) {
+    if (evt.keyCode !== 27) { // fix IE11
       return;
     }
     // if (evt.key !== 'Escape') {
@@ -48,16 +48,15 @@
   });
 
   // by click overlay
-  for (let modalIndex2 = 0; modalIndex2 < modals.length; modalIndex2 ++) {
-    let currentModal = modals[modalIndex2];
-    currentModal.addEventListener('click', function (evt) {
+  [].map.call(modals, function (modal) {
+    modal.addEventListener('click', function (evt) {
       if (evt.target.classList[0] !== 'modal') {
         return;
       }
-      currentModal.classList.remove('modal--show');
+      modal.classList.remove('modal--show');
       bodyPage.classList.remove('modal--open');
     });
-  }
+  });
 
   // validate modal form
   var orderFrom = document.querySelector('.modal__form');
@@ -98,11 +97,7 @@
       addInvalidClass(formBlock);
       return;
     }
-    // if (phone.validity.patternMismatch) {
-    //   phone.setCustomValidity('Укажи номер телефона в формате +7 (000) 000 00 00 без  8 или +7');
-    //   addInvalidClass(formBlock);
-    //   return;
-    // }
+
     phone.setCustomValidity('');
     addValidClass(formBlock);
     localStorage.setItem('phoneInput', phone.value);
@@ -114,7 +109,7 @@
       return;
     }
     consentCheckbox.setCustomValidity('');
-  }
+  };
 
   modalNameInput.addEventListener('invalid', function () {
     validateName(modalNameInput, modalFiled);
@@ -208,14 +203,13 @@
 
   // faq accordion
   var faqToggleButtons = document.querySelectorAll('.faq__arrow-link');
-  for (let faqIndex = 0; faqIndex < faqToggleButtons.length; faqIndex++) {
-    let faqButton = faqToggleButtons[faqIndex];
+  [].map.call(faqToggleButtons, function (faqButton) {
     faqButton.addEventListener('click', function (evt) {
       evt.preventDefault();
       faqButton.parentNode.querySelector('.faq__answer').classList.toggle('faq__answer--hidden');
       faqButton.classList.toggle('faq__arrow-link--opened');
     });
-  }
+  });
 
   // validate form in section contacts
   var contactForm = document.querySelector('.contacts__form');
@@ -299,7 +293,7 @@
       responsive: [
         {
           breakpoint: 9999,
-          settings: "unslick",
+          settings: 'unslick',
         },
         {
           breakpoint: 767,
@@ -312,7 +306,7 @@
         },
       ]
     });
-  }
+  };
 
   $(window).on('load resize', function () {
     var withWindow = window.innerWidth;
