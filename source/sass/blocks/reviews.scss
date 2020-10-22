@@ -144,6 +144,12 @@ ul .reviews__item--social {
   margin-bottom: 0;
 }
 
+@media (max-width: 1250px) {
+  ul.reviews__right {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: $tablet-width-only) {
   .reviews {
     margin-bottom: 90px;

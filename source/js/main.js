@@ -97,7 +97,11 @@
       addInvalidClass(formBlock);
       return;
     }
-
+    if (phone.validity.patternMismatch) {
+      phone.setCustomValidity('Укажи номер телефона в заданном формате');
+      addInvalidClass(formBlock);
+      return;
+    }
     phone.setCustomValidity('');
     addValidClass(formBlock);
     localStorage.setItem('phoneInput', phone.value);
@@ -213,6 +217,7 @@
 
   // validate form in section contacts
   var contactForm = document.querySelector('.contacts__form');
+  var contactFormContainer = contactForm.querySelector('.contacts__form-fields');
   var contactNameInput = contactForm.querySelector('#contact-name');
   var contactPhoneInput = contactForm.querySelector('#contact-phone');
 
@@ -231,7 +236,17 @@
     validatePhone(contactPhoneInput, contactForm);
   });
 
+  function setMaskPhone() {
+    if (contactPhoneInput.value === '+') {
+      contactFormContainer.classList.remove('contacts__form-fields--input');
+    } else if (contactPhoneInput.value.length !== 0) {
+      contactFormContainer.classList.add('contacts__form-fields--input');
+    }
+  }
+  setMaskPhone();
+
   contactPhoneInput.addEventListener('input', function () {
+    setMaskPhone();
     validatePhone(contactPhoneInput, contactForm);
   });
 
@@ -254,7 +269,7 @@
     var updateSliderCounter = function (slick) {
       currentSlide = slick.slickCurrentSlide() + 1;
       slidesCount = slick.slideCount;
-      $(sliderCounter).text(currentSlide + '/' + slidesCount);
+      $(sliderCounter).text(currentSlide + ' / ' + slidesCount);
     };
 
     $slider.on('init', function (event, slick) {
@@ -266,6 +281,24 @@
       updateSliderCounter(slick, affterCurrentSlide);
     });
     $slider.slick();
+  }
+
+  var clientWidth = document.documentElement.clientWidth;
+  var reviewsImageContainer = document.querySelector('.reviews__image');
+  var sliderButtons = document.querySelectorAll('.slick-arrow');
+
+  function setSliderElementsPosition() {
+    clientWidth = document.documentElement.clientWidth;
+    sliderCounter.style.top = reviewsImageContainer.offsetHeight + 10 + 'px';
+    for (var sliderButton = 0; sliderButton < sliderButtons.length; sliderButton++) {
+      sliderButtons[sliderButton].style.top = reviewsImageContainer.offsetHeight + 22 + 'px';
+    }
+  }
+
+  if (clientWidth < 768) {
+    setSliderElementsPosition();
+    window.addEventListener('resize', setSliderElementsPosition);
+    window.addEventListener('load', setSliderElementsPosition);
   }
 
   // slider live in Israel

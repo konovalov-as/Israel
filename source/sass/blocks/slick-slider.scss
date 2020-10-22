@@ -3,7 +3,7 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  top: 93.5%;
+  top: 94.3%;
   width: 8px;
   height: 15px;
   opacity: 0.2;
@@ -29,7 +29,7 @@
 }
 
 .slick-prev {
-  left: 38%;
+  left: 38.2%;
   background-image: url("../img/icon-review-arrow-left.svg");
 
   &:hover,
@@ -40,7 +40,7 @@
 }
 
 .slick-next {
-  left: 41%;
+  left: 40.6%;
   background-image: url("../img/icon-review-arrow-right.svg");
 
   &:hover,
@@ -50,7 +50,47 @@
   }
 }
 
+.slider__counter {
+  font-size: 17px;
+  line-height: 25px;
+  opacity: 0.5;
+  position: absolute;
+  top: 92%;
+  left: 33.4%;
+}
+
+@media (max-width: $tablet-width-only) {
+  .slick-arrow {
+    left: 36%;
+  }
+
+  .slick-next {
+    left: 38%;
+  }
+
+  .slider__counter {
+    left: 29%;
+  }
+}
+
 @media (max-width: $mobile-width-only) {
+  .slick-arrow {
+    top: 34%;
+  }
+
+  .slick-prev {
+    left: 54%;
+  }
+
+  .slick-next {
+    left: 64%;
+  }
+
+  .slider__counter {
+    left: 33%;
+    top: 32.7%;
+  }
+
   .slick-dots li {
     margin: 0;
     width: auto;

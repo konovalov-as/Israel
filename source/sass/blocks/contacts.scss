@@ -238,6 +238,7 @@
 }
 
 .contacts__form-fields svg {
+  display: none;
   width: 110px;
   height: 1px;
   margin-right: 24px;
@@ -270,6 +271,16 @@
   &:focus {
     border-color: #ffc341;
   }
+}
+
+.contacts__form-fields--input input {
+  &:focus + svg {
+    display: block;
+  }
+}
+
+.contacts__form-fields--input svg {
+  display: block;
 }
 
 .contacts__form-fields--invalid input {
@@ -430,6 +441,14 @@
     margin-bottom: 1px;
   }
 
+  .contacts__form-fields label {
+    margin-right: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   .contacts__form-fields svg {
     top: 18px;
   }
@@ -440,11 +459,8 @@
     margin-right: 11px;
   }
 
-  .contacts__form-fields label {
-    margin-right: 0;
-  }
-
   .contacts__submit-block button {
+    margin-top: 16px;
     max-width: 100%;
     width: 99%;
   }

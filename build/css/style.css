@@ -606,7 +606,7 @@ input[type="radio"].visually-hidden {
   border: none;
   padding: 0;
   cursor: pointer;
-  top: 93.5%;
+  top: 94.3%;
   width: 8px;
   height: 15px;
   opacity: 0.2;
@@ -624,18 +624,43 @@ input[type="radio"].visually-hidden {
     content: none; }
 
 .slick-prev {
-  left: 38%;
+  left: 38.2%;
   background-image: url("../img/icon-review-arrow-left.svg"); }
   .slick-prev:hover, .slick-prev:focus, .slick-prev:active {
     background-image: url("../img/icon-review-arrow-left.svg"); }
 
 .slick-next {
-  left: 41%;
+  left: 40.6%;
   background-image: url("../img/icon-review-arrow-right.svg"); }
   .slick-next:hover, .slick-next:focus, .slick-next:active {
     background-image: url("../img/icon-review-arrow-right.svg"); }
 
+.slider__counter {
+  font-size: 17px;
+  line-height: 25px;
+  opacity: 0.5;
+  position: absolute;
+  top: 92%;
+  left: 33.4%; }
+
+@media (max-width: 1023px) {
+  .slick-arrow {
+    left: 36%; }
+  .slick-next {
+    left: 38%; }
+  .slider__counter {
+    left: 29%; } }
+
 @media (max-width: 767px) {
+  .slick-arrow {
+    top: 34%; }
+  .slick-prev {
+    left: 54%; }
+  .slick-next {
+    left: 64%; }
+  .slider__counter {
+    left: 33%;
+    top: 32.7%; }
   .slick-dots li {
     margin: 0;
     width: auto;
@@ -1249,7 +1274,7 @@ input[type="radio"].visually-hidden {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     max-width: 100%;
-    margin-bottom: 13px;
+    margin-bottom: 28px;
     padding-bottom: 5px; }
   .tab__item {
     margin-right: 30px; }
@@ -1485,7 +1510,8 @@ input[type="radio"].visually-hidden {
     position: static; }
   .want-to-go__form input {
     width: 100%;
-    margin-bottom: 8px; }
+    margin-bottom: 9px;
+    padding-top: 18px; }
   .want-to-go__form button {
     display: block;
     margin: 0 auto;
@@ -2203,7 +2229,7 @@ input[type="radio"].visually-hidden {
 
 @media (max-width: 767px) {
   .faq {
-    margin-bottom: 32px;
+    margin-bottom: 41px;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: -7px 737px;
@@ -2242,7 +2268,8 @@ input[type="radio"].visually-hidden {
   .faq__question--5 {
     margin-right: 5px; }
   .faq__question--6 {
-    max-width: 200px; }
+    max-width: 200px;
+    margin-bottom: 17px; }
   .faq__answer {
     margin-bottom: 12px; }
   .faq__right {
@@ -2374,6 +2401,10 @@ ul.reviews__right {
 ul .reviews__item--social {
   margin-right: 15px;
   margin-bottom: 0; }
+
+@media (max-width: 1250px) {
+  ul.reviews__right {
+    margin-right: 0; } }
 
 @media (max-width: 1023px) {
   .reviews {
@@ -2661,6 +2692,7 @@ ul .reviews__item--social {
     margin-right: 27px; }
 
 .contacts__form-fields svg {
+  display: none;
   width: 110px;
   height: 1px;
   margin-right: 24px;
@@ -2690,6 +2722,12 @@ ul .reviews__item--social {
   min-height: 59px; }
   .contacts__form-fields input:hover, .contacts__form-fields input:focus {
     border-color: #ffc341; }
+
+.contacts__form-fields--input input:focus + svg {
+  display: block; }
+
+.contacts__form-fields--input svg {
+  display: block; }
 
 .contacts__form-fields--invalid input {
   border-color: red; }
@@ -2796,15 +2834,18 @@ ul .reviews__item--social {
   .contacts__form-fields {
     display: block;
     margin-bottom: 1px; }
+  .contacts__form-fields label {
+    margin-right: 0; }
+    .contacts__form-fields label:last-child {
+      margin-right: 0; }
   .contacts__form-fields svg {
     top: 18px; }
   .contacts__submit-block {
     max-width: 100%;
     margin-left: 12px;
     margin-right: 11px; }
-  .contacts__form-fields label {
-    margin-right: 0; }
   .contacts__submit-block button {
+    margin-top: 16px;
     max-width: 100%;
     width: 99%; }
   .contacts__right {
@@ -3092,6 +3133,7 @@ ul.page-footer__social {
 
 .modal__field-checkbox input:hover + span,
 .modal__field-checkbox input:focus + span {
+  border-color: #1fc0fc;
   -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.7);
           box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.7); }
 
