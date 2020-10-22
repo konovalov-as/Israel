@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var bodyPage = document.querySelector('.body')
+  var bodyPage = document.querySelector('.body');
   var callOrderButton = document.querySelector('.page-header__order');
   var orderModal = document.querySelector('.modal--order');
 
@@ -17,7 +17,7 @@
 
   // close modal by close button
   var modalCloseButtons = document.querySelectorAll('.modal__close');
-  for (let closeButton = 0; closeButton < modalCloseButtons.length; closeButton++) {
+  for (var closeButton = 0; closeButton < modalCloseButtons.length; closeButton++) {
     modalCloseButtons[closeButton].addEventListener('click', function () {
       orderModal.classList.remove('modal--show');
       successModal.classList.remove('modal--show');
@@ -35,27 +35,28 @@
   // by Esc key
   var modals = document.querySelectorAll('.modal');
   document.addEventListener('keydown', function (evt) {
-    if (evt.key !== 'Escape') {
+    if (evt.keyCode !== 27) { // fix IE11
       return;
     }
-    for (let modal = 0; modal < modals.length; modal++) {
-      let currentModal = modals[modal];
-      currentModal.classList.remove('modal--show');
+    // if (evt.key !== 'Escape') {
+    //   return;
+    // }
+    for (var modalIndex = 0; modalIndex < modals.length; modalIndex++) {
+      modals[modalIndex].classList.remove('modal--show');
     }
     bodyPage.classList.remove('modal--open');
   });
 
   // by click overlay
-  for (let modal = 0; modal < modals.length; modal++) {
-    let currentModal = modals[modal];
-    currentModal.addEventListener('click', function (evt) {
+  [].map.call(modals, function (modal) {
+    modal.addEventListener('click', function (evt) {
       if (evt.target.classList[0] !== 'modal') {
         return;
       }
-      currentModal.classList.remove('modal--show');
+      modal.classList.remove('modal--show');
       bodyPage.classList.remove('modal--open');
     });
-  }
+  });
 
   // validate modal form
   var orderFrom = document.querySelector('.modal__form');
@@ -96,11 +97,11 @@
       addInvalidClass(formBlock);
       return;
     }
-    // if (phone.validity.patternMismatch) {
-    //   phone.setCustomValidity('Укажи номер телефона в формате +7 (000) 000 00 00 без  8 или +7');
-    //   addInvalidClass(formBlock);
-    //   return;
-    // }
+    if (phone.validity.patternMismatch) {
+      phone.setCustomValidity('Укажи номер телефона в заданном формате');
+      addInvalidClass(formBlock);
+      return;
+    }
     phone.setCustomValidity('');
     addValidClass(formBlock);
     localStorage.setItem('phoneInput', phone.value);
@@ -112,7 +113,7 @@
       return;
     }
     consentCheckbox.setCustomValidity('');
-  }
+  };
 
   modalNameInput.addEventListener('invalid', function () {
     validateName(modalNameInput, modalFiled);
@@ -146,6 +147,7 @@
   // validate phone into want to go block
   var wantGoForm = document.querySelector('.want-to-go__form');
   var goPhoneInput = wantGoForm.querySelector('#go-phone');
+  goPhoneInput.value = localStorage.getItem('phoneInput');
 
   goPhoneInput.addEventListener('invalid', function () {
     validatePhone(goPhoneInput, wantGoForm);
@@ -178,13 +180,13 @@
 
   function hideTabs() {
     var tabs = document.querySelectorAll('.js-tab--content');
-    for (let tab = 0; tab < tabs.length; tab++) {
+    for (var tab = 0; tab < tabs.length; tab++) {
       tabs[tab].classList.add('js-tab--hide');
     }
   }
 
   var tabButtons = document.querySelectorAll('button.js-tab');
-  for (let tabButtonIndex = 0; tabButtonIndex < tabButtons.length; tabButtonIndex++) {
+  for (var tabButtonIndex = 0; tabButtonIndex < tabButtons.length; tabButtonIndex++) {
     tabButtons[tabButtonIndex].addEventListener('click', showTab);
   }
 
@@ -192,7 +194,7 @@
 
   // go to tab
   var cards = document.querySelectorAll('.places-visit__link');
-  for (let card; card < cards.length; card++) {
+  for (var card; card < cards.length; card++) {
     cards[card].addEventListener('click', function (evt) {
       hideCurrentTab();
       var tabTargetId = evt.target.closest('.places-visit__link').attributes.href.value.slice(1);
@@ -204,17 +206,18 @@
   }
 
   // faq accordion
-  var faqToggleButtons = document.querySelectorAll('.faq__arrow');
-  for (let faqIndex = 0; faqIndex < faqToggleButtons.length; faqIndex++) {
-    let faqButton = faqToggleButtons[faqIndex];
-    faqButton.addEventListener('click', function () {
+  var faqToggleButtons = document.querySelectorAll('.faq__arrow-link');
+  [].map.call(faqToggleButtons, function (faqButton) {
+    faqButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
       faqButton.parentNode.querySelector('.faq__answer').classList.toggle('faq__answer--hidden');
-      // faqButton.classList.toggle('faq__arrow--opened');
+      faqButton.classList.toggle('faq__arrow-link--opened');
     });
-  }
+  });
 
   // validate form in section contacts
   var contactForm = document.querySelector('.contacts__form');
+  var contactFormContainer = contactForm.querySelector('.contacts__form-fields');
   var contactNameInput = contactForm.querySelector('#contact-name');
   var contactPhoneInput = contactForm.querySelector('#contact-phone');
 
@@ -233,7 +236,17 @@
     validatePhone(contactPhoneInput, contactForm);
   });
 
+  function setMaskPhone() {
+    if (contactPhoneInput.value === '+') {
+      contactFormContainer.classList.remove('contacts__form-fields--input');
+    } else if (contactPhoneInput.value.length !== 0) {
+      contactFormContainer.classList.add('contacts__form-fields--input');
+    }
+  }
+  setMaskPhone();
+
   contactPhoneInput.addEventListener('input', function () {
+    setMaskPhone();
     validatePhone(contactPhoneInput, contactForm);
   });
 
@@ -246,41 +259,85 @@
   });
 
   // slider reviews
-  var reviewPrevButtons = document.querySelectorAll('.reviews__buttons--previous');
-  var reviewNextButtons = document.querySelectorAll('.reviews__buttons--next');
-  var reviewSlides = document.querySelectorAll('.reviews__item--slide');
+  var $slider = $('.reviews__list');
+  if ($slider.length) {
+    var currentSlide;
+    var slidesCount;
+    var sliderCounter = document.createElement('div');
+    sliderCounter.classList.add('slider__counter');
 
-  var reviewSlide = 0;
+    var updateSliderCounter = function (slick) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + ' / ' + slidesCount);
+    };
 
-  for (var reviewPrevButton = 0; reviewPrevButton < reviewPrevButtons.length; reviewPrevButton++) {
-    reviewPrevButtons[reviewPrevButton].addEventListener('click', function () {
-      reviewSlides[reviewSlide].classList.remove('reviews__item--showed');
-      reviewSlide--;
-      if (reviewSlide < 0) {
-        reviewSlide = reviewSlides.length - 1;
-      }
-      var reviewCounter = reviewSlides[reviewSlide].querySelector('.reviews__counter-value');
-      reviewCounter.innerHTML = '';
-      reviewSlides[reviewSlide].classList.add('reviews__item--showed');
+    $slider.on('init', function (event, slick) {
+      $slider.append(sliderCounter);
+      updateSliderCounter(slick);
     });
+
+    $slider.on('afterChange', function (event, slick, affterCurrentSlide) {
+      updateSliderCounter(slick, affterCurrentSlide);
+    });
+    $slider.slick();
   }
 
-  for (var reviewNextButton = 0; reviewNextButton < reviewNextButtons.length; reviewNextButton++) {
-    reviewNextButtons[reviewNextButton].addEventListener('click', function () {
-      reviewSlides[reviewSlide].classList.remove('reviews__item--showed');
-      reviewSlide++;
-      if (reviewSlide >= reviewSlides.length) {
-        reviewSlide = 0;
-      }
-      reviewSlides[reviewSlide].classList.add('reviews__item--showed');
-    });
+  var clientWidth = document.documentElement.clientWidth;
+  var reviewsImageContainer = document.querySelector('.reviews__image');
+  var sliderButtons = document.querySelectorAll('.slick-arrow');
+
+  function setSliderElementsPosition() {
+    clientWidth = document.documentElement.clientWidth;
+    sliderCounter.style.top = reviewsImageContainer.offsetHeight + 10 + 'px';
+    for (var sliderButton = 0; sliderButton < sliderButtons.length; sliderButton++) {
+      sliderButtons[sliderButton].style.top = reviewsImageContainer.offsetHeight + 22 + 'px';
+    }
+  }
+
+  if (clientWidth < 768) {
+    setSliderElementsPosition();
+    window.addEventListener('resize', setSliderElementsPosition);
+    window.addEventListener('load', setSliderElementsPosition);
   }
 
   // slider live in Israel
+  var startIsraelSlider = function () {
+    $('.live-in-israel__image-block').slick({
+      dots: true,
+      infinite: false,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 9999,
+          settings: 'unslick',
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          }
+        },
+      ]
+    });
+  };
 
+  $(window).on('load resize', function () {
+    var withWindow = window.innerWidth;
+    if (withWindow < 767) {
+      startIsraelSlider();
+    }
+  });
 
   // jQuery Mask Plugin
   $('#contact-phone').mask('+7 (000) 000 00 00');
   $('#go-phone').mask('+7 (000) 000 00 00');
+  $('#modal-phone').mask('+7 (000) 000 00 00');
 
 })();
