@@ -120,7 +120,6 @@
 
 .reviews__footer-left {
   display: flex;
-  opacity: 0;
   align-items: baseline;
 }
 
@@ -133,6 +132,37 @@
   line-height: 25px;
   opacity: 0.5;
   margin-right: 24px;
+}
+
+.reviews__buttons {
+  border: none;
+  background-color: transparent;
+  margin-right: 20px;
+  padding: 0;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    stroke: #ffc341;
+    opacity: 1;
+  }
+
+  &:active svg {
+    stroke: $base-color;
+    opacity: 0.2;
+  }
+}
+
+.reviews__buttons svg {
+  stroke: $base-color;
+  fill: transparent;
+  opacity: 0.2;
+  width: 8px;
+  height: 15px;
 }
 
 ul.reviews__right {

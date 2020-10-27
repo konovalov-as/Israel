@@ -9,7 +9,7 @@
   callOrderButton.addEventListener('click', function (evt) {
     evt.preventDefault();
     orderModal.classList.add('modal--show');
-    modalConsentCheckbox.focus();
+    modalNameInput.focus();
     modalNameInput.value = localStorage.getItem('nameInput');
     modalPhoneInput.value = localStorage.getItem('phoneInput');
     bodyPage.classList.add('modal--open');
@@ -259,47 +259,60 @@
   });
 
   // slider reviews
-  var $slider = $('.reviews__list');
-  if ($slider.length) {
-    var currentSlide;
-    var slidesCount;
-    var sliderCounter = document.createElement('div');
-    sliderCounter.classList.add('slider__counter');
+  var $sliderReviews = $('.reviews__list');
+  // if ($slider.length) {
+  // var currentSlide;
+  // var slidesCount;
 
-    var updateSliderCounter = function (slick) {
-      currentSlide = slick.slickCurrentSlide() + 1;
-      slidesCount = slick.slideCount;
-      $(sliderCounter).text(currentSlide + ' / ' + slidesCount);
-    };
+  // var sliderCounter = document.createElement('div');
+  // var sliderCounter = document.querySelectorAll('.reviews__counter-value');
+  // sliderCounter.classList.add('slider__counter');
 
-    $slider.on('init', function (event, slick) {
-      $slider.append(sliderCounter);
-      updateSliderCounter(slick);
-    });
+  // var updateSliderCounter = function (slick) {
+  //   currentSlide = slick.slickCurrentSlide() + 1;
+  //   slidesCount = slick.slideCount;
+  //   $(sliderCounter).text(currentSlide + ' / ' + slidesCount);
+  // };
 
-    $slider.on('afterChange', function (event, slick, affterCurrentSlide) {
-      updateSliderCounter(slick, affterCurrentSlide);
-    });
-    $slider.slick();
-  }
+  // $slider.on('init', function (event, slick) {
+  //   $slider.append(sliderCounter);
+  //   updateSliderCounter(slick);
+  // });
 
-  var clientWidth = document.documentElement.clientWidth;
-  var reviewsImageContainer = document.querySelector('.reviews__image');
-  var sliderButtons = document.querySelectorAll('.slick-arrow');
+  // $slider.on('afterChange', function (event, slick, affterCurrentSlide) {
+  //   updateSliderCounter(slick, affterCurrentSlide);
+  // });
 
-  function setSliderElementsPosition() {
-    clientWidth = document.documentElement.clientWidth;
-    sliderCounter.style.top = reviewsImageContainer.offsetHeight + 10 + 'px';
-    for (var sliderButton = 0; sliderButton < sliderButtons.length; sliderButton++) {
-      sliderButtons[sliderButton].style.top = reviewsImageContainer.offsetHeight + 22 + 'px';
-    }
-  }
+  $sliderReviews.slick({
+    arrows: false,
+  });
+  // }
 
-  if (clientWidth < 768) {
-    setSliderElementsPosition();
-    window.addEventListener('resize', setSliderElementsPosition);
-    window.addEventListener('load', setSliderElementsPosition);
-  }
+  // var clientWidth = document.documentElement.clientWidth;
+  // var reviewsImageContainer = document.querySelector('.reviews__image');
+  // var sliderButtons = document.querySelectorAll('.slick-arrow');
+
+  // function setSliderElementsPosition() {
+  //   clientWidth = document.documentElement.clientWidth;
+  //   sliderCounter.style.top = reviewsImageContainer.offsetHeight + 10 + 'px';
+  //   for (var sliderButton = 0; sliderButton < sliderButtons.length; sliderButton++) {
+  //     sliderButtons[sliderButton].style.top = reviewsImageContainer.offsetHeight + 22 + 'px';
+  //   }
+  // }
+
+  // if (clientWidth < 768) {
+  //   setSliderElementsPosition();
+  //   window.addEventListener('resize', setSliderElementsPosition);
+  //   window.addEventListener('load', setSliderElementsPosition);
+  // }
+
+  $('.reviews__buttons--previous').on('click', function () {
+    $sliderReviews.slick('slickPrev');
+  });
+
+  $('.reviews__buttons--next').on('click', function () {
+    $sliderReviews.slick('slickNext');
+  });
 
   // slider live in Israel
   var startIsraelSlider = function () {
