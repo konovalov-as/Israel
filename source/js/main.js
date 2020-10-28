@@ -260,51 +260,28 @@
 
   // slider reviews
   var $sliderReviews = $('.reviews__list');
-  // if ($slider.length) {
-  // var currentSlide;
-  // var slidesCount;
+  var currentSlide;
+  var slidesCount;
 
-  // var sliderCounter = document.createElement('div');
-  // var sliderCounter = document.querySelectorAll('.reviews__counter-value');
-  // sliderCounter.classList.add('slider__counter');
+  var sliderCounter = document.querySelectorAll('.reviews__counter-value');
 
-  // var updateSliderCounter = function (slick) {
-  //   currentSlide = slick.slickCurrentSlide() + 1;
-  //   slidesCount = slick.slideCount;
-  //   $(sliderCounter).text(currentSlide + ' / ' + slidesCount);
-  // };
+  var updateSliderCounter = function (slick) {
+    currentSlide = slick.slickCurrentSlide() + 1;
+    slidesCount = slick.slideCount;
+    $(sliderCounter).text(currentSlide + ' / ' + slidesCount);
+  };
 
-  // $slider.on('init', function (event, slick) {
-  //   $slider.append(sliderCounter);
-  //   updateSliderCounter(slick);
-  // });
+  $sliderReviews.on('init', function (event, slick) {
+    updateSliderCounter(slick);
+  });
 
-  // $slider.on('afterChange', function (event, slick, affterCurrentSlide) {
-  //   updateSliderCounter(slick, affterCurrentSlide);
-  // });
+  $sliderReviews.on('afterChange', function (event, slick, affterCurrentSlide) {
+    updateSliderCounter(slick, affterCurrentSlide);
+  });
 
   $sliderReviews.slick({
     arrows: false,
   });
-  // }
-
-  // var clientWidth = document.documentElement.clientWidth;
-  // var reviewsImageContainer = document.querySelector('.reviews__image');
-  // var sliderButtons = document.querySelectorAll('.slick-arrow');
-
-  // function setSliderElementsPosition() {
-  //   clientWidth = document.documentElement.clientWidth;
-  //   sliderCounter.style.top = reviewsImageContainer.offsetHeight + 10 + 'px';
-  //   for (var sliderButton = 0; sliderButton < sliderButtons.length; sliderButton++) {
-  //     sliderButtons[sliderButton].style.top = reviewsImageContainer.offsetHeight + 22 + 'px';
-  //   }
-  // }
-
-  // if (clientWidth < 768) {
-  //   setSliderElementsPosition();
-  //   window.addEventListener('resize', setSliderElementsPosition);
-  //   window.addEventListener('load', setSliderElementsPosition);
-  // }
 
   $('.reviews__buttons--previous').on('click', function () {
     $sliderReviews.slick('slickPrev');
